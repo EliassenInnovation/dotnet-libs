@@ -4,6 +4,9 @@ using Nucleus.Blog.Contracts.Models.Filters;
 using Nucleus.Blog.Contracts.Persistence;
 using Nucleus.Core.Contracts.Models;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection.Metadata;
 using System.Threading.Tasks;
 
 namespace Nucleus.Blog.Business.Managers
@@ -17,6 +20,8 @@ namespace Nucleus.Blog.Business.Managers
         {
             _blogService = blogService;
         }
+
+        public IQueryable<BlogModel> QueryBlogs() => _blogService.Query();
 
         public async Task<BlogModel?> GetBlog(string blogId) =>
             await _blogService.GetAsync(blogId, false);
