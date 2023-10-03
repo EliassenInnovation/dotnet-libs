@@ -20,13 +20,6 @@ namespace Nucleus.Blog.Controllers.Controllers
             _blogManager = blogManager;
         }
 
-#warning retire this
-        [HttpPost("Blogs")]
-        [ApplicationRight(Rights.Blog.Manager)]
-        [Obsolete]
-        public async Task<IActionResult> GetAllBlogsPagedAsync(BlogsFilter filter) =>
-            new JsonResult(await _blogManager.GetBlogsPagedAsync(filter));
-
         [HttpGet("Blog/{id}")]
         [ApplicationRight(Rights.Blog.Manager)]
         public async Task<IActionResult> GetAsync(string id) =>

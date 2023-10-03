@@ -26,22 +26,6 @@ namespace Nucleus.Blog.Business.Managers
         public async Task<BlogModel?> GetBlog(string blogId) =>
             await _blogService.GetAsync(blogId, false);
 
-#warning retire this
-        public async Task<PagedResult<BlogModel>> GetBlogsPagedAsync(BlogsFilter blogsFilter)
-        {
-            blogsFilter.PagingModel ??= PagingModel.Default;
-            var blogs = await _blogService.GetPagedAsync(blogsFilter.PagingModel, blogsFilter.BlogFilters, false);
-            var result = new PagedResult<BlogModel>()
-            {
-                CurrentPage = blogsFilter.PagingModel.CurrentPage,
-                PageSize = blogsFilter.PagingModel.PageSize,
-                Results = blogs,
-                RowCount = await _blogService.GetPagedCountAsync(blogsFilter.PagingModel, blogsFilter.BlogFilters, false),
-                PageCount = blogs.Count
-            };
-            return result;
-        }
-
         public async Task<ResponseModel<BlogModel?>> SaveBlogAsync(BlogModel blog)
         {
             if (blog == null || string.IsNullOrEmpty(blog.Title) || string.IsNullOrEmpty(blog.Content) || string.IsNullOrEmpty(blog.Slug) || string.IsNullOrEmpty(blog.Preview))

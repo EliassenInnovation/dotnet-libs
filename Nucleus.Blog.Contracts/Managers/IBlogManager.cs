@@ -13,8 +13,5 @@ namespace Nucleus.Blog.Contracts.Managers
 
         IQueryable<BlogModel> QueryBlogs();
 
-
-#warning retire this
-        Task<PagedResult<BlogModel>> GetBlogsPagedAsync(BlogsFilter blogsFilter);
     }
 }
