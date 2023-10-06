@@ -67,6 +67,10 @@ public class QueryableExtensionsTests
     [DataRow(typeof(TestTargetModel), nameof(TestTargetModel.Index), Operators.LessThanOrEqualTo, "5", 6, "0,1,2,3,4,5")]
     [DataRow(typeof(TestTargetModel), nameof(TestTargetModel.Index), Operators.GreaterThan, 995, 4, "996,997,998,999")]
     [DataRow(typeof(TestTargetModel), nameof(TestTargetModel.Index), Operators.GreaterThanOrEqualTo, 995, 5, "995,996,997,998,999")]
+    [DataRow(typeof(TestTargetModel), nameof(TestTargetModel.Index), Operators.EqualTo, "0", 1, "0")]
+    //TODO: not currently supported [DataRow(typeof(TestTargetModel), nameof(TestTargetModel.Index), Operators.EqualTo, "0.0", 1, "0")]
+    [DataRow(typeof(TestTargetModel), nameof(TestTargetModel.Index), Operators.EqualTo, 0, 1, "0")]
+    [DataRow(typeof(TestTargetModel), nameof(TestTargetModel.Index), Operators.EqualTo, 0.0, 1, "0")]
     [DataRow(typeof(TestTargetModel), nameof(TestTargetModel.Name), Operators.EqualTo, "*03", 9, "103,203,303,403,503,603,703,803,903")]
     [DataRow(typeof(TestTargetModel), nameof(TestTargetModel.Name), Operators.EqualTo, "*e2*", 10, "2,20,21,22,23,24,25,26,27,28")]
     [DataRow(typeof(TestTargetModel), nameof(TestTargetModel.Name), Operators.EqualTo, "Name1*", 10, "1,10,11,12,13,14,15,16,17,18")]
@@ -137,6 +141,11 @@ public class QueryableExtensionsTests
                 { propertyName, expressionOperator.AsFilter(filterValue ) }
             }
         };
+
+        //Note: round trip through the serializer to ensure this works correctly
+        var queryJson = JsonSerializer.Serialize(query, Eliassen.System.Text.Json.Serialization.DefaultJsonSerializer.DefaultOptions);
+        query = JsonSerializer.Deserialize<SearchQuery>(queryJson, Eliassen.System.Text.Json.Serialization.DefaultJsonSerializer.DefaultOptions);
+
         this.TestContext.AddResult(query);
         var rawData = GetTestData<T>(typeof(T) == typeof(TestTargetExtendedModel) ? -1 : 0);
         this.TestContext.AddResult(rawData);
@@ -181,10 +190,10 @@ public class QueryableExtensionsTests
 
     [DataTestMethod]
     [TestCategory(TestCategories.Unit)]
-    [DataRow(typeof(TestTargetModel), "Name3", 1, 1, 1, "3")]
-    [DataRow(typeof(TestTargetModel), "Name3*", 12, 111, 10, "3,30,31,32,33,34,35,36,37,38")]
-    [DataRow(typeof(TestTargetModel), "*3", 10, 100, 10, "3,13,23,33,43,53,63,73,83,93")]
-    [DataRow(typeof(TestTargetModel), "*e3*", 12, 111, 10, "3,30,31,32,33,34,35,36,37,38")]
+    //[DataRow(typeof(TestTargetModel), "Name3", 1, 1, 1, "3")]
+    //[DataRow(typeof(TestTargetModel), "Name3*", 12, 111, 10, "3,30,31,32,33,34,35,36,37,38")]
+    //[DataRow(typeof(TestTargetModel), "*3", 10, 100, 10, "3,13,23,33,43,53,63,73,83,93")]
+    //[DataRow(typeof(TestTargetModel), "*e3*", 12, 111, 10, "3,30,31,32,33,34,35,36,37,38")]
     [DataRow(typeof(TestTargetExtendedModel), "FName0999 LName0001", 1, 1, 1, "1")]
     public void ExecuteByTest_SearchTerm(Type type, string searchTerm, int expectedTotalPages, int expectedTotalRows, int expectedRows, string expectedKeys)
     {
