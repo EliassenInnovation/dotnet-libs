@@ -1,5 +1,4 @@
-﻿using Nucleus.Core.Contracts.Models;
-using Nucleus.Lesson.Contracts.Models;
+﻿using Nucleus.Lesson.Contracts.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

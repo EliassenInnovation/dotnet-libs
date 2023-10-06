@@ -17,7 +17,7 @@ namespace Nucleus.Lesson.Persistence.Services
             PaymentStatus = item.PaymentStatus
             
         };
-        public static Expression<Func<Contracts.Collections.LessonScheduleCollection, LessonScheduleModel>> LessonSchedule => item => new LessonScheduleModel()
+        public static Expression<Func<LessonScheduleCollection, LessonScheduleModel>> LessonSchedule => item => new LessonScheduleModel()
         {
             LessonScheduleId = item.LessonScheduleId,
             Content = item.Content,

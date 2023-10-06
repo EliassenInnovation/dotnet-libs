@@ -4,6 +4,7 @@ using Nucleus.Lesson.Contracts.Collections;
 using Nucleus.Lesson.Contracts.Models;
 using Nucleus.Lesson.Contracts.Models.Filters;
 using Nucleus.Lesson.Contracts.Persistence;
+using Nucleus.Lesson.Persistence.Collections;
 using System;
 using System.Collections.Generic;
 using System.Linq;
