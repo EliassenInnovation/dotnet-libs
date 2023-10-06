@@ -35,7 +35,7 @@ namespace Nucleus.Lesson.Controllers.Controllers
         public IQueryable<LessonScheduleModel> ListLessons() => _publicLessonScheduleManager.QueryLessons();
 
         [HttpPost("Save")]
-        [ApplicationRight(Rights.Lesson.Manager)]
+        //[ApplicationRight(Rights.Lesson.Manager)]
         public async Task<IActionResult> SaveAsync(LessonScheduleModel lesson) =>
             new JsonResult(await _LessonScheduleManager.SaveLessonAsync(lesson));
 

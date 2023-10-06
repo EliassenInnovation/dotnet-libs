@@ -8,7 +8,7 @@ namespace Nucleus.Lesson.Contracts.Models
     {
         [NotSearchable]
         [IgnoreStringComparisonReplacement]
-        public string? LessonId { get; set; }
+        public string? LessonScheduleId { get; set; }
         public string? Title { get; set; }
         public string? MediaLink { get; set; }
         public string? Preview { get; set; }
@@ -17,13 +17,12 @@ namespace Nucleus.Lesson.Contracts.Models
 
         public string? Slug { get; set; }
         public string? Content { get; set; }
-        public Boolean? Enabled { get; set; }
+        public bool? Enabled { get; set; }
         [DefaultSort(priority: 0)]
 
         public DateTimeOffset? CreatedOn { get; set; }
-        public long CreatedOnUnix { get; set; }
 
-        public string? Teacher { get; set; }
+        public TeacherModel? Teacher { get; set; }
         public int? Duration { get; set; }
 
         public DateTimeOffset? StartDateTime { get; set; }

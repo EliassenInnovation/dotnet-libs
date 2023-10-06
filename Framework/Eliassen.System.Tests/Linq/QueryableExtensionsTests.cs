@@ -12,6 +12,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Reflection.Metadata.Ecma335;
+using System.Text.Json;
 
 namespace Eliassen.System.Tests.Linq;
 
@@ -109,6 +110,24 @@ public class QueryableExtensionsTests
                 expectedKeys
             });
     }
+
+    [TestMethod]
+    [TestCategory(TestCategories.Unit)]
+    public void ExecuteByTest_Filter_JsonElement()
+    {
+        var filterValue = JsonSerializer.Deserialize<object>("\"Name3\"");
+        ExecuteByTestFilter<TestTargetModel>(nameof(TestTargetModel.Name), Operators.EqualTo, filterValue, 1, "3");
+    }
+
+    [TestMethod]
+    [TestCategory(TestCategories.Unit)]
+    public void ExecuteByTest_Filter_JsonElement_Nested()
+    {
+        var filterValue = JsonSerializer.Deserialize<object>("\"Module-2\"");
+        ExecuteByTestFilter<TestTargetExtendedModel>(TestTargetExtendedModel.Module, Operators.EqualTo, filterValue, 10, "3,4,5,6,7,8,9,10,11,12");
+    }
+
+
     private void ExecuteByTestFilter<T>(string propertyName, Operators expressionOperator, object filterValue, int expectedRows, string expectedKeys)
     {
         var query = new SearchQuery

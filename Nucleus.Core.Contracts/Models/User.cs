@@ -11,6 +11,7 @@ namespace Nucleus.Core.Contracts.Models
     [Searchable(FirstNameLastName)]
     [Searchable(LastNameFirstName)]
     [Filterable(Module)]
+    [Filterable(Role)]
     [Filterable(UserStatus)]
     [SearchTermDefault(SearchTermDefaults.StartsWith)]
     [DebuggerDisplay("{FirstName} {LastName}")]
@@ -19,6 +20,7 @@ namespace Nucleus.Core.Contracts.Models
         public const string FirstNameLastName = nameof(FirstNameLastName);
         public const string LastNameFirstName = nameof(LastNameFirstName);
         public const string Module = nameof(Module);
+        public const string Role = nameof(Role);
         public const string UserStatus = nameof(UserStatus);
 
         [IgnoreStringComparisonReplacement]
@@ -57,6 +59,7 @@ namespace Nucleus.Core.Contracts.Models
             key switch
             {
                 Module => e => e.UserModules.Any(um => um.Code.Equals(value)),
+                Role => e => e.UserModules.Any(um => um.Roles.Any(r=>r.Code.Equals(value))),
                 UserStatus => e => value.Equals("-1") || e.Active == value.Equals("1"),
                 _ => null
             };

@@ -13,7 +13,11 @@
     "createdOn": {
       "$date": "2017-09-20T12:43:50.435+00:00"
     },
-    "teacher": "George Golferson",
+    "teacher": {
+      "userId": "646cf816fe22b3a795d90a93",
+      "fullName": "David McIlroy",
+      "emailAddress": "davidMcIlroy@eliassen.com"
+    },
     "duration": 15,
     "tags": [],
     "price": 1.91,
@@ -38,7 +42,11 @@
     "createdOn": {
       "$date": "2017-09-20T12:43:50.435+00:00"
     },
-    "teacher": "Bobby Butterfingers",
+    "teacher": {
+      "userId": "646cf7cbfe22b3a795d90a92",
+      "fullName": "Jimmie Fowler",
+      "emailAddress": "JimmieFowler@eliassen.com"
+    },
     "duration": 20,
     "tags": [],
     "price": 1.93,
@@ -63,7 +71,11 @@
     "createdOn": {
       "$date": "2017-09-20T12:43:50.435+00:00"
     },
-    "teacher": "John Smith",
+    "teacher": {
+      "userId": "646cf7cbfe22b3a795d90a92",
+      "fullName": "Jimmie Fowler",
+      "emailAddress": "JimmyFowler@eliassen.com"
+    },
     "duration": 25,
     "tags": [],
     "price": 1.78,
@@ -88,7 +100,11 @@
     "createdOn": {
       "$date": "2017-09-20T12:43:50.435+00:00"
     },
-    "teacher": "Waterlogged Walter",
+    "teacher": {
+      "userId": "646cf7cbfe22b3a795d90a92",
+      "fullName": "Jimmy Fowler",
+      "emailAddress": "JimmyFowler@eliassen.com"
+    },
     "duration": 45,
     "tags": [],
     "price": 1.66,
@@ -113,7 +129,11 @@
     "createdOn": {
       "$date": "2017-09-20T12:43:50.435+00:00"
     },
-    "teacher": "Never-Defeated Daryl",
+    "teacher": {
+      "userId": "646cf816fe22b3a795d90a93",
+      "fullName": "David McIlroy",
+      "emailAddress": "davidMcIlroy@eliassen.com"
+    },
     "duration": 50,
     "tags": [],
     "price": 1.44,
@@ -138,7 +158,11 @@
     "createdOn": {
       "$date": "2017-09-20T12:43:50.435+00:00"
     },
-    "teacher": "Seasoned-Golfer Susan",
+    "teacher": {
+      "userId": "646cf816fe22b3a795d90a93",
+      "fullName": "David McIlroy",
+      "emailAddress": "davidMcIlroy@eliassen.com"
+    },
     "duration": 55,
     "tags": [],
     "price": 1.01,
@@ -163,7 +187,11 @@
     "createdOn": {
       "$date": "2017-09-20T12:43:50.435+00:00"
     },
-    "teacher": "Albert Einstein",
+    "teacher": {
+      "userId": "646cf816fe22b3a795d90a93",
+      "fullName": "David McIlroy",
+      "emailAddress": "davidMcIlroy@eliassen.com"
+    },
     "duration": 65,
     "tags": [],
     "price": 5.99,
@@ -188,7 +216,11 @@
     "createdOn": {
       "$date": "2017-09-20T12:43:50.435+00:00"
     },
-    "teacher": "Focused Freddy",
+    "teacher": {
+      "userId": "646cf816fe22b3a795d90a93",
+      "fullName": "David McIlroy",
+      "emailAddress": "davidMcIlroy@eliassen.com"
+    },
     "duration": 110,
     "tags": [],
     "price": 1.99,
@@ -213,7 +245,11 @@
     "createdOn": {
       "$date": "2017-09-20T12:43:50.435+00:00"
     },
-    "teacher": "NotAScammer Steve",
+    "teacher": {
+      "userId": "646cf816fe22b3a795d90a93",
+      "fullName": "David McIlroy",
+      "emailAddress": "davidMcIlroy@eliassen.com"
+    },
     "duration": 10,
     "tags": [],
     "price": 1.99,
@@ -238,7 +274,11 @@
     "createdOn": {
       "$date": "2017-09-20T12:43:50.435+00:00"
     },
-    "teacher": "NotAScammer Steve",
+    "teacher": {
+      "userId": "646cf816fe22b3a795d90a93",
+      "fullName": "David McIlroy",
+      "emailAddress": "davidMcIlroy@eliassen.com"
+    },
     "duration": 100,
     "tags": [
       "18 100% winrate"
@@ -265,7 +305,11 @@
     "createdOn": {
       "$date": "2017-09-20T12:43:50.435+00:00"
     },
-    "teacher": "NotAScammer Steve",
+    "teacher": {
+      "userId": "646cf816fe22b3a795d90a93",
+      "fullName": "David McIlroy",
+      "emailAddress": "davidMcIlroy@eliassen.com"
+    },
     "duration": 15,
     "tags": [
       "100% winrate"

@@ -1,12 +1,8 @@
 ﻿using Eliassen.System.Text.Json;
-using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.Json.Serialization;
-using System.Threading.Tasks;
 
 namespace Nucleus.Lesson.Persistence.Collections
 {
@@ -19,7 +15,6 @@ namespace Nucleus.Lesson.Persistence.Collections
         [JsonConverter(typeof(BsonIdConverter))]
         public string? LessonId { get; set; }
 
-        [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         [JsonPropertyName("lessonScheduleId")]
         [JsonConverter(typeof(BsonIdConverter))]
@@ -37,6 +32,6 @@ namespace Nucleus.Lesson.Persistence.Collections
 
         [BsonElement("paymentStatus")]
         public string? PaymentStatus { get; set; }
-        
+
     }
 }

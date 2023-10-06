@@ -1,10 +1,11 @@
 ﻿using Eliassen.System.Text.Json;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using Nucleus.Lesson.Persistence.Collections;
 using System;
 using System.Text.Json.Serialization;
 
-namespace Nucleus.Lesson.Persistence.Collections
+namespace Nucleus.Lesson.Contracts.Collections
 {
     [BsonIgnoreExtraElements]
     public class LessonScheduleCollection
@@ -13,10 +14,10 @@ namespace Nucleus.Lesson.Persistence.Collections
         [BsonRepresentation(BsonType.ObjectId)]
         [JsonPropertyName("_id")]
         [JsonConverter(typeof(BsonIdConverter))]
-        public string? LessonId { get; set; }
+        public string? LessonScheduleId { get; set; }
 
         [BsonElement("title")]
-        public string? Title {  get; set; }
+        public string? Title { get; set; }
         [BsonElement("slug")]
         public string? Slug { get; set; }
         [BsonElement("mediaLink")]
@@ -28,14 +29,14 @@ namespace Nucleus.Lesson.Persistence.Collections
         [BsonElement("content")]
         public string? Content { get; set; }
         [BsonElement("enabled")]
-        public Boolean? Enabled { get; set; }
+        public bool? Enabled { get; set; }
 
         [BsonElement("createdOn")]
         [JsonConverter(typeof(BsonDateConverter))]
         public DateTimeOffset? CreatedOn { get; set; }
 
         [BsonElement("teacher")]
-        public string? Teacher { get; set; }
+        public TeacherCollection? Teacher { get; set; }
 
         [BsonElement("duration")]
         public int? Duration { get; set; }
@@ -49,11 +50,11 @@ namespace Nucleus.Lesson.Persistence.Collections
         [BsonElement("goals")]
         public string[]? Goals { get; set; }
 
-        [BsonElement("startDatetime")]
+        [BsonElement("startDateTime")]
         [JsonConverter(typeof(BsonDateConverter))]
         public DateTimeOffset? StartDateTime { get; set; }
 
-        [BsonElement("enddatetime")]
+        [BsonElement("endDateTime")]
         [JsonConverter(typeof(BsonDateConverter))]
         public DateTimeOffset? EndDateTime { get; set; }
 

@@ -23,6 +23,5 @@ namespace Nucleus.Lesson.Contracts.Persistence
         IQueryable<LessonModel> Query();
         void UpdateLesson(LessonModel lesson);
         void UpdateLessons(LessonModel[] lessons);
-        Task<List<LessonModel>?> GetLessonsByLessonScheduleId(string lessonScheduleId);
     }
 }

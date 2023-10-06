@@ -1,10 +1,8 @@
 ﻿using Nucleus.Core.Contracts.Models;
 using Nucleus.Lesson.Contracts.Managers;
 using Nucleus.Lesson.Contracts.Models;
-using Nucleus.Lesson.Contracts.Models.Filters;
 using Nucleus.Lesson.Contracts.Persistence;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Nucleus.Lesson.Business.Managers
@@ -24,14 +22,14 @@ namespace Nucleus.Lesson.Business.Managers
 
         public async Task<ResponseModel<LessonScheduleModel?>> SaveLessonAsync(LessonScheduleModel lesson)
         {
-            if (lesson == null || string.IsNullOrEmpty(lesson.Title) || string.IsNullOrEmpty(lesson.Teacher))
+            if (lesson == null)
                 return new ResponseModel<LessonScheduleModel?>()
                 {
                     IsSuccess = false,
-                    Message = "Missing Required Fields"
+                    Message = "Missing Required Fields. Lesson cannot be null."
                 };
             ResponseModel<LessonScheduleModel?> result = new ResponseModel<LessonScheduleModel?>() { IsSuccess = true };
-            if (String.IsNullOrEmpty(lesson.LessonId))
+            if (String.IsNullOrEmpty(lesson.LessonScheduleId))
             {
                 result.Response = await _LessonScheduleService.CreateAsync(lesson);
                 return result;

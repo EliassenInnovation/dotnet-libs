@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
+using System.Text.Json;
 
 namespace Eliassen.System.Linq.Expressions;
 
@@ -171,7 +172,7 @@ public class ExpressionTreeBuilder<TModel> : IExpressionTreeBuilder<TModel>
 
         if (queryParameter is string queryString && queryString.Length > 0) //TODO: should be "like"
         {
-            if ( queryString[..1] == "!")
+            if (queryString[..1] == "!")
             {
                 return BuildPredicate(scope, expression, Operators.NotEqualTo, queryString[1..], isSearchTerm);
             }
@@ -496,6 +497,17 @@ public class ExpressionTreeBuilder<TModel> : IExpressionTreeBuilder<TModel>
         return exp;
     }
 
+    private object? SimplifyValue(object? value) =>
+        value switch
+        {
+            FilterParameter filter => SimplifyValue(filter.EqualTo),
+            JsonElement element when element.ValueKind == JsonValueKind.String => element.GetString(),
+            JsonElement element when element.ValueKind == JsonValueKind.Number => element.GetDouble(),
+            JsonElement element when element.ValueKind == JsonValueKind.Array => element.EnumerateArray().Select(i => SimplifyValue(i)).ToArray(),
+            _ => value,
+        };
+
+
     private bool TryGetPredicateExpression(
         string name,
         FilterParameter value,
@@ -514,11 +526,15 @@ public class ExpressionTreeBuilder<TModel> : IExpressionTreeBuilder<TModel>
 
         if (value.EqualTo != null)
         {
-            expression = modelType.GetStaticMethod(PredicateMap, typeof(string), typeof(object))
-                ?.Invoke(null, new object[] { name, value.EqualTo }) as Expression<Func<TModel, bool>>;
+            var simple = SimplifyValue(value);
+            if (simple != null)
+            {
+                expression = modelType.GetStaticMethod(PredicateMap, typeof(string), typeof(object))
+                    ?.Invoke(null, new object[] { name, simple }) as Expression<Func<TModel, bool>>;
 
-            expression ??= modelType.GetStaticMethod(PredicateMap, typeof(string), typeof(object), typeof(StringComparison))
-                ?.Invoke(null, new object[] { name, value.EqualTo, stringComparison }) as Expression<Func<TModel, bool>>;
+                expression ??= modelType.GetStaticMethod(PredicateMap, typeof(string), typeof(object), typeof(StringComparison))
+                    ?.Invoke(null, new object[] { name, simple, stringComparison }) as Expression<Func<TModel, bool>>;
+            }
         }
 
         //TODO: should I add support to unroll the searchOption?
