@@ -170,7 +170,7 @@ steps:
   condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
 - task: AzureRmWebAppDeployment@4
-  condition: and(succeeded(), eq('${{ parameters.doDeployment }}', true))
+  condition: and(succeeded(), eq('${{ parameters.doDeployment }}', true), ne(variables['Build.Reason'], 'PullRequest'))
   displayName: 'Deploying API to ${{ parameters.targetEnvironment }}'
   inputs:
     ConnectionType: 'AzureRM'
@@ -181,7 +181,7 @@ steps:
 
 # This is an example step to do a data deployment as part of application deployment
 - task: DotNetCoreCLI@2
-  condition: and(succeeded(), eq('${{ parameters.doDeployment }}', true), ne('${{ parameters.dataDeploymentType }}', 'None'))
+  condition: and(succeeded(), eq('${{ parameters.doDeployment }}', true), ne('${{ parameters.dataDeploymentType }}', 'None'), ne(variables['Build.Reason'], 'PullRequest'))
   displayName: 'Deploying Data to ${{ parameters.targetEnvironment }}'
   inputs:
     command: 'run'
