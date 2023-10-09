@@ -1,9 +1,8 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
-using Nucleus.Lesson.Persistence.Collections;
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Nucleus.Lesson.Contracts.Collections
+namespace Nucleus.Lesson.Persistence.Collections
 {
     [BsonIgnoreExtraElements]
     public class LessonScheduleCollection

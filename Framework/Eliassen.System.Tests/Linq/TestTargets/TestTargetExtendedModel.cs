@@ -53,11 +53,6 @@ public class TestTargetExtendedModel
     //TODO: nullable array values can not be included in searchable
     public string[]? Modules { get; set; }
 
-
-    [Searchable]
-    public string[]? Modules { get; set; }
-
-
     [Searchable]
     public DateTime Date { get; set; }
 
