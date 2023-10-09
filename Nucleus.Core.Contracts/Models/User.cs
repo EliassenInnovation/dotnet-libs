@@ -46,24 +46,18 @@ namespace Nucleus.Core.Contracts.Models
         public DateTimeOffset? CreatedOn { get; set; }
 
         public static Expression<Func<User, object>>? PropertyMap(string key) =>
-            key switch
+            new Dictionary<string, Expression<Func<User, object>>>(StringComparer.CurrentCultureIgnoreCase)
             {
-                FirstNameLastName => e => e.FirstName + " " + e.LastName,
-                LastNameFirstName => e => e.LastName + " " + e.FirstName,
-                _ => null
-            };
+                { FirstNameLastName , e => e.FirstName + " " + e.LastName },
+                { LastNameFirstName , e => e.LastName + " " + e.FirstName},
+            }.TryGetValue(key, out var exp) ? exp : null;
 
-#pragma warning disable CS8604 // Possible null reference argument.
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
         public static Expression<Func<User, bool>>? PredicateMap(string key, object value) =>
-            key switch
+            new Dictionary<string, Expression<Func<User, bool>>>(StringComparer.CurrentCultureIgnoreCase)
             {
-                Module => e => e.UserModules.Any(um => um.Code.Equals(value)),
-                Role => e => e.UserModules.Any(um => um.Roles.Any(r=>r.Code.Equals(value))),
-                UserStatus => e => value.Equals("-1") || e.Active == value.Equals("1"),
-                _ => null
-            };
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
-#pragma warning restore CS8604 // Possible null reference argument.
+                { Module , e => e.UserModules.Any(um => um.Code.Equals(value)) },
+                { Role , e => e.UserModules.Any(um => um.Roles.Any(r => r.Code.Equals(value))) },
+                { UserStatus, e => value.Equals("-1") || e.Active == value.Equals("1") },
+            }.TryGetValue(key, out var exp) ? exp : null;
     }
 }
