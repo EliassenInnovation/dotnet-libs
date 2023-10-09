@@ -1,25 +1,25 @@
 # Summary - Nucleus.Acc.Net.Api.sln - (Release)
 |||
 |:---|:---|
-| Generated on: | 9/6/2023 - 3:37:03 PM |
-| Coverage date: | 9/6/2023 - 3:36:40 PM - 9/6/2023 - 3:36:51 PM |
+| Generated on: | 9/28/2023 - 11:18:28 PM |
+| Coverage date: | 9/28/2023 - 11:15:20 PM - 9/28/2023 - 11:15:30 PM |
 | Parser: | MultiReport (8x Cobertura) |
 | Assemblies: | 4 |
 | Classes: | 38 |
 | Files: | 37 |
-| **Line coverage:** | 53.3% (770 of 1444) |
+| **Line coverage:** | 53.2% (770 of 1445) |
 | Covered lines: | 770 |
-| Uncovered lines: | 674 |
-| Coverable lines: | 1444 |
-| Total lines: | 3772 |
-| **Branch coverage:** | 55.4% (493 of 889) |
+| Uncovered lines: | 675 |
+| Coverable lines: | 1445 |
+| Total lines: | 3884 |
+| **Branch coverage:** | 55.3% (493 of 891) |
 | Covered branches: | 493 |
-| Total branches: | 889 |
+| Total branches: | 891 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
 
 |**Name**|**Covered**|**Uncovered**|**Coverable**|**Total**|**Line coverage**|**Covered**|**Total**|**Branch coverage**|
 |:---|---:|---:|---:|---:|---:|---:|---:|---:|
-|**Eliassen.System**|**663**|**482**|**1145**|**3392**|**57.9%**|**425**|**755**|**56.2%**|
+|**Eliassen.System**|**663**|**483**|**1146**|**3504**|**57.8%**|**425**|**757**|**56.1%**|
 |Eliassen.System.Accessors.Accessor`1|0|3|3|17|0%|0|0||
 |Eliassen.System.Configuration.CommandLine|0|20|20|53|0%|0|28|0%|
 |Eliassen.System.Extensions.Configuration.ConfigurationBuilderExtensions|0|8|8|26|0%|0|0||
@@ -27,7 +27,7 @@
 |Eliassen.System.IO.StreamJsonDeserializeExtensions|10|10|20|69|50%|4|8|50%|
 |Eliassen.System.IO.StreamXmlDeserializeExtensions|8|12|20|70|40%|2|8|25%|
 |Eliassen.System.Linq.AsyncEnumerableExtensions|0|25|25|109|0%|0|36|0%|
-|Eliassen.System.Linq.DictionaryExtensions|2|0|2|44|100%|0|0||
+|Eliassen.System.Linq.DictionaryExtensions|2|0|2|148|100%|0|0||
 |Eliassen.System.Linq.Expressions.ExpressionExtensions|23|15|38|99|60.5%|16|34|47%|
 |Eliassen.System.Linq.Expressions.ExpressionTreeBuilder`1|282|31|313|564|90%|199|232|85.7%|
 |Eliassen.System.Linq.Expressions.ParameterReplacerExpressionVisitor|3|0|3|15|100%|2|2|100%|
@@ -46,7 +46,7 @@
 |Eliassen.System.Text.Json.BsonDateConverter|11|16|27|73|40.7%|7|36|19.4%|
 |Eliassen.System.Text.Json.BsonIdConverter|13|1|14|45|92.8%|8|14|57.1%|
 |Eliassen.System.Text.Json.JsonDocumentExtensions|0|36|36|211|0%|0|31|0%|
-|Eliassen.System.Text.Json.Serialization.DefaultJsonSerializer|0|21|21|69|0%|0|2|0%|
+|Eliassen.System.Text.Json.Serialization.DefaultJsonSerializer|0|22|22|77|0%|0|4|0%|
 |Eliassen.System.Text.Templating.FileTemplateSource|0|46|46|82|0%|0|4|0%|
 |Eliassen.System.Text.Templating.TemplateContext|0|6|6|40|0%|0|2|0%|
 |Eliassen.System.Text.Templating.TemplateEngine|0|39|39|88|0%|0|10|0%|

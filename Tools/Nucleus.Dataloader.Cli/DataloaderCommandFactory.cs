@@ -35,7 +35,11 @@ namespace Nucleus.Dataloader.Cli
                 {
                     var elementType = collection.PropertyType.GetGenericArguments()[0];
                     var setType = elementType.MakeArrayType();
-                    var collectionName = collection.GetCustomAttributes<CollectionNameAttribute>().FirstOrDefault()?.CollectionName ?? elementType.Name;
+
+                    //TODO: need to simplify this name logic with that on the MongoDispatchProxy
+                    var collectionName = collection.GetCustomAttributes<CollectionNameAttribute>().FirstOrDefault()?.CollectionName ??
+                        elementType.GetCustomAttributes<CollectionNameAttribute>().FirstOrDefault()?.CollectionName ??
+                        elementType.Name;
                     var data = collection.GetValue(database) ?? throw new NotSupportedException($"{collection} has no value on {database}");
 
                     var commands = from cmd in _commands

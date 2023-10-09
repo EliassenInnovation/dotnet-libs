@@ -3,7 +3,7 @@
     "_id": {
       "$oid": "123f1236e7abf8eb062387e5"
     },
-    "LessonScheduleId": {
+    "lessonScheduleId": {
       "$oid": "647f5966e7abf8eb062387e5"
     },
     "lessonDateTime": {
@@ -17,7 +17,7 @@
     "_id": {
       "$oid": "123f4446e7abf8eb062387e4"
     },
-    "LessonScheduleId": {
+    "lessonScheduleId": {
       "$oid": "647f5966e7abf8eb062387e5"
     },
     "lessonDateTime": {
@@ -31,7 +31,7 @@
     "_id": {
       "$oid": "567f1236e7abf8eb062387e5"
     },
-    "LessonScheduleId": {
+    "lessonScheduleId": {
       "$oid": "647f5966e7abf8eb062387e5"
     },
     "lessonDateTime": {

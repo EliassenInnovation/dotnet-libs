@@ -1,38 +1,21 @@
-﻿using Eliassen.System.Text.Json;
-using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
+﻿using Eliassen.MongoDB.Extensions;
 using System;
-using System.Text.Json.Serialization;
+using System.ComponentModel.DataAnnotations;
 
-namespace Nucleus.Project.Persistence.Collections
+namespace Nucleus.Project.Persistence.Collections;
+
+[CollectionName("projects")]
+public class ProjectCollection
 {
-    [BsonIgnoreExtraElements]
-    public class ProjectCollection
-    {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        [JsonPropertyName("_id")]
-        [JsonConverter(typeof(BsonIdConverter))]
-        public string? ProjectId { get; set; }
-
-        [BsonElement("title")]
-        public string? Title { get; set; }
-        [BsonElement("slug")]
-        public string? Slug { get; set; }
-        [BsonElement("projectLink")]
-        public string? ProjectLink { get; set; }
-        [BsonElement("projectImage")]
-        public string? ProjectImage { get; set; }
-        [BsonElement("preview")]
-        public string? Preview { get; set; }
-        [BsonElement("content")]
-        public string? Content { get; set; }
-        [BsonElement("page")]
-        public string? Page { get; set; }
-        [BsonElement("enabled")]
-        public bool? Enabled { get; set; }
-        [BsonElement("createdOn")]
-        [JsonConverter(typeof(BsonDateConverter))]
-        public DateTimeOffset CreatedOn { get; set; }
-    }
+    [Key]
+    public string? ProjectId { get; set; }
+    public string? Title { get; set; }
+    public string? Slug { get; set; }
+    public string? ProjectLink { get; set; }
+    public string? ProjectImage { get; set; }
+    public string? Preview { get; set; }
+    public string? Content { get; set; }
+    public string? Page { get; set; }
+    public bool? Enabled { get; set; }
+    public DateTimeOffset CreatedOn { get; set; }
 }

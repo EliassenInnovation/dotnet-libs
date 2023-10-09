@@ -95,6 +95,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SampleData", "SampleData", 
 	ProjectSection(SolutionItems) = preProject
 		Conf\MongoDb\SampleData\blogs.json = Conf\MongoDb\SampleData\blogs.json
 		Conf\MongoDb\SampleData\documents.json = Conf\MongoDb\SampleData\documents.json
+		Conf\MongoDb\SampleData\lessons.json = Conf\MongoDb\SampleData\lessons.json
+		Conf\MongoDb\SampleData\lessonSchedule.json = Conf\MongoDb\SampleData\lessonSchedule.json
 		Conf\MongoDb\SampleData\modules.json = Conf\MongoDb\SampleData\modules.json
 		Conf\MongoDb\SampleData\projects.json = Conf\MongoDb\SampleData\projects.json
 		Conf\MongoDb\SampleData\users.json = Conf\MongoDb\SampleData\users.json
@@ -183,6 +185,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nucleus.External.Azure.StorageAccount.Abstractions", "Nucleus.External.Azure.StorageAccount.Abstractions\Nucleus.External.Azure.StorageAccount.Abstractions.csproj", "{05ABA648-9629-4A22-98F5-FDA00F47515F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nucleus.External.Azure.StorageAccount.Tests", "Nucleus.External.Azure.StorageAccount.Tests\Nucleus.External.Azure.StorageAccount.Tests.csproj", "{8AF65E33-00FE-4180-BFAF-C1027E6ED6D1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nucleus.Core.Shared.Tests", "Nucleus.Core.Shared.Tests\Nucleus.Core.Shared.Tests.csproj", "{925B47C2-9593-4359-B79D-40370B12856F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -342,6 +346,10 @@ Global
 		{8AF65E33-00FE-4180-BFAF-C1027E6ED6D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8AF65E33-00FE-4180-BFAF-C1027E6ED6D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8AF65E33-00FE-4180-BFAF-C1027E6ED6D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{925B47C2-9593-4359-B79D-40370B12856F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{925B47C2-9593-4359-B79D-40370B12856F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{925B47C2-9593-4359-B79D-40370B12856F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{925B47C2-9593-4359-B79D-40370B12856F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -401,6 +409,7 @@ Global
 		{526F2BCF-56F5-47F4-9585-705A542BB4FC} = {71129CCF-1669-468F-A0B3-7A306149C3F5}
 		{05ABA648-9629-4A22-98F5-FDA00F47515F} = {7F87E973-492B-437E-A5AC-C14580FFA0DD}
 		{8AF65E33-00FE-4180-BFAF-C1027E6ED6D1} = {7F87E973-492B-437E-A5AC-C14580FFA0DD}
+		{925B47C2-9593-4359-B79D-40370B12856F} = {D9A021EF-50EA-47C1-89E7-61D2AC39AF6D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {92959CB8-A44C-4F0D-BBCF-C99B014BEEAD}

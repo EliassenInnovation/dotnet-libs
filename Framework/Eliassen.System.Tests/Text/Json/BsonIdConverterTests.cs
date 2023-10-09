@@ -1,5 +1,4 @@
-﻿using Eliassen.System.Reflection;
-using Eliassen.System.Tests.Text.Json.TestTargets;
+﻿using Eliassen.System.Tests.Text.Json.TestTargets;
 using Eliassen.TestUtilities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Text.Json;

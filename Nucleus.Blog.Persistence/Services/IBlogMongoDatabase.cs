@@ -6,7 +6,6 @@ namespace Nucleus.Blog.Persistence.Services
 {
     public interface IBlogMongoDatabase
     {
-        [CollectionName("blogs")]
         IMongoCollection<BlogCollection> Blogs { get; }
     }
 }

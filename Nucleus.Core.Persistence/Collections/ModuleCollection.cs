@@ -1,25 +1,16 @@
-﻿using Eliassen.System.Text.Json;
-using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
+﻿using Eliassen.MongoDB.Extensions;
 using System;
 using System.Collections.Generic;
-using System.Text.Json.Serialization;
+using System.ComponentModel.DataAnnotations;
 
 namespace Nucleus.Core.Persistence.Collections;
 
-[BsonIgnoreExtraElements]
+[CollectionName("modules")]
 public class ModuleCollection : PermissionBaseCollection
 {
-    [BsonId]
-    [BsonRepresentation(BsonType.ObjectId)]
-    [JsonPropertyName("_id")]
-    [JsonConverter(typeof(BsonIdConverter))]
+    [Key]
     public string? ModuleId { get; set; }
 
-    [BsonElement("roles")]
     public List<RoleCollection>? Roles { get; set; }
-
-    [BsonElement("createdOn")]
-    [JsonConverter(typeof(BsonDateConverter))]
     public DateTimeOffset CreatedOn { get; set; }
 }

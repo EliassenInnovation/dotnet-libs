@@ -1,6 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
+﻿using System;
+using System.Linq;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -9,10 +8,18 @@ namespace Eliassen.System.Text.Json;
 /// <summary>
 /// System.Text.Json converter to support BsonDatetimeOffset
 /// </summary>
-public class BsonDateConverter : JsonConverter<DateTimeOffset>
+public class BsonDateTimeOffsetConverter : JsonConverter<object>
 {
+    public override bool CanConvert(Type typeToConvert) =>
+        new[] {
+            typeof(DateTimeOffset),
+            typeof(DateTimeOffset?),
+            typeof(DateTime),
+            typeof(DateTime?),
+        }.Contains(typeToConvert);
+
     /// <inheritdoc/>
-    public override DateTimeOffset Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+    public override object Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
         var type = reader.TokenType;
 
@@ -64,10 +71,22 @@ public class BsonDateConverter : JsonConverter<DateTimeOffset>
     }
 
     /// <inheritdoc/>
-    public override void Write(Utf8JsonWriter writer, DateTimeOffset value, JsonSerializerOptions options)
+    public override void Write(Utf8JsonWriter writer, object value, JsonSerializerOptions options)
     {
         writer.WriteStartObject();
-        writer.WriteString("$date", value);
+
+        if (value is DateTimeOffset dto)
+        {
+            writer.WriteString("$date", dto);
+        }
+        else if (value is DateTime dt)
+        {
+            writer.WriteString("$date", dt);
+        }
+        else
+        {
+            throw new NotSupportedException();
+        }
         writer.WriteEndObject();
     }
 }

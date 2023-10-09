@@ -712,4 +712,4 @@ Response: #/components/schemas/Nucleus.Core.Contracts.Models.PagedResult-Nucleus
 
 ---
 
-Generated: 2023-09-06 15:37:34
+Generated: 2023-09-28 23:03:15

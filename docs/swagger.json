@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Nucleus.Blog.Controllers",
-    "version": "0.1.41.80"
+    "version": "0.1.43.4"
   },
   "paths": {
     "/api/Blog/Blogs": {
@@ -1561,17 +1561,73 @@
             "nullable": true
           },
           "filter": {
-            "type": "object",
-            "additionalProperties": {
-              "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+            "properties": {
+              "blogId": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "title": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "slug": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "tags": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "preview": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "content": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "enabled": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "author": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "createdOn": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "createdOnUnix": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              }
             },
             "description": "**Filterable Properties:** BlogId; Title; Slug; Tags; Preview; Content; Enabled; Author; CreatedOn",
             "nullable": true
           },
           "orderBy": {
-            "type": "object",
-            "additionalProperties": {
-              "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+            "properties": {
+              "blogId": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "title": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "slug": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "tags": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "preview": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "content": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "enabled": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "author": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "createdOn": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "createdOnUnix": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              }
             },
             "description": "**Sortable Properties:** BlogId, Title, Slug, Tags, Preview, Content, Enabled, Author, CreatedOn  **Default Order:** CreatedOn asc, Title asc",
             "nullable": true
@@ -1601,17 +1657,37 @@
             "nullable": true
           },
           "filter": {
-            "type": "object",
-            "additionalProperties": {
-              "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+            "properties": {
+              "moduleId": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "roles": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "name": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "code": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              }
             },
             "description": "**Filterable Properties:** ModuleId; Roles; Name; Code",
             "nullable": true
           },
           "orderBy": {
-            "type": "object",
-            "additionalProperties": {
-              "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+            "properties": {
+              "moduleId": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "roles": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "name": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "code": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              }
             },
             "description": "**Sortable Properties:** ModuleId, Roles, Name, Code  **Default Order:** Name asc",
             "nullable": true
@@ -1641,17 +1717,79 @@
             "nullable": true
           },
           "filter": {
-            "type": "object",
-            "additionalProperties": {
-              "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+            "properties": {
+              "firstNameLastName": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "lastNameFirstName": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "userId": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "userName": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "emailAddress": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "firstName": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "lastName": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "active": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "userModules": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "createdOn": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "module": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "userStatus": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              }
             },
             "description": "**Filterable Properties:** FirstNameLastName; LastNameFirstName; UserId; UserName; EmailAddress; FirstName; LastName; Active; UserModules; CreatedOn; Module; UserStatus",
             "nullable": true
           },
           "orderBy": {
-            "type": "object",
-            "additionalProperties": {
-              "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+            "properties": {
+              "firstNameLastName": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "lastNameFirstName": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "userId": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "userName": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "emailAddress": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "firstName": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "lastName": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "active": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "userModules": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "createdOn": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              }
             },
             "description": "**Sortable Properties:** FirstNameLastName, LastNameFirstName, UserId, UserName, EmailAddress, FirstName, LastName, Active, UserModules, CreatedOn  **Default Order:** LastName asc, FirstName asc, EmailAddress asc",
             "nullable": true
@@ -1681,17 +1819,127 @@
             "nullable": true
           },
           "filter": {
-            "type": "object",
-            "additionalProperties": {
-              "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+            "properties": {
+              "lessonId": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "title": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "mediaLink": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "preview": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "previewImage": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "slug": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "content": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "enabled": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "createdOn": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "createdOnUnix": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "attendees": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "teacher": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "duration": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "startDateTime": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "endDateTime": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "tags": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "price": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "goals": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              },
+              "notes": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.FilterParameter"
+              }
             },
             "description": "**Filterable Properties:** LessonId; Title; MediaLink; Preview; PreviewImage; Slug; Content; Enabled; CreatedOn; CreatedOnUnix; Attendees; Teacher; Duration; StartDateTime; EndDateTime; Tags; Price; Goals; Notes",
             "nullable": true
           },
           "orderBy": {
-            "type": "object",
-            "additionalProperties": {
-              "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+            "properties": {
+              "lessonId": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "title": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "mediaLink": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "preview": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "previewImage": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "slug": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "content": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "enabled": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "createdOn": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "createdOnUnix": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "attendees": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "teacher": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "duration": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "startDateTime": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "endDateTime": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "tags": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "price": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "goals": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              },
+              "notes": {
+                "$ref": "#/components/schemas/Eliassen.System.Linq.Search.OrderDirections"
+              }
             },
             "description": "**Sortable Properties:** LessonId, Title, MediaLink, Preview, PreviewImage, Slug, Content, Enabled, CreatedOn, CreatedOnUnix, Attendees, Teacher, Duration, StartDateTime, EndDateTime, Tags, Price, Goals, Notes  **Default Order:** CreatedOn asc, Slug asc",
             "nullable": true

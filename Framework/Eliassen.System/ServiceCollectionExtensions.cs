@@ -74,6 +74,7 @@ public static class ServiceCollectionExtensions
     {
         services.TryAddSingleton<ISerializer>(sp => sp.GetRequiredService<IJsonSerializer>());
         services.TryAddSingleton<IJsonSerializer, DefaultJsonSerializer>();
+        services.TryAddSingleton<IBsonSerializer, DefaultBsonSerializer>();
         //TODO: services.TryAddSingleton<IXmlSerializer, DefaultXmlSerializer>();
         services.TryAddSingleton(_ => DefaultJsonSerializer.DefaultOptions);
         return services;

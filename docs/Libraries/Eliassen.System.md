@@ -557,6 +557,16 @@ Convert System.Test.Json.JsonDocument to System.Xml.XmlDocument
 
 ## Class: System.Text.Json.Serialization.DefaultJsonSerializer
 Default serializer for JSON
+### Methods
+
+
+#### AsPropertyName(System.String)
+Use the configured property naming policy to change provided value
+    #####Parameters
+    **propertyName:** 
+
+    ##### Return value
+    
 
 ## Class: System.Text.Templating.FileTemplateSource
 Access template from file system

@@ -1,38 +1,21 @@
-﻿using Eliassen.System.Text.Json;
-using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
+﻿using Eliassen.MongoDB.Extensions;
 using System;
 using System.Collections.Generic;
-using System.Text.Json.Serialization;
+using System.ComponentModel.DataAnnotations;
 
-namespace Nucleus.Blog.Persistence.Collections
+namespace Nucleus.Blog.Persistence.Collections;
+
+[CollectionName("blogs")]
+public class BlogCollection
 {
-    [BsonIgnoreExtraElements]
-    public class BlogCollection
-    {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        [JsonPropertyName("_id")]
-        [JsonConverter(typeof(BsonIdConverter))]
-        public string? BlogId { get; set; }
-
-        [BsonElement("title")]
-        public string? Title { get; set; }
-        [BsonElement("slug")]
-        public string? Slug { get; set; }
-        [BsonElement("tags")]
-        public List<string?>? Tags { get; set; }
-        [BsonElement("preview")]
-        public string? Preview { get; set; }
-        [BsonElement("content")]
-        public string? Content { get; set; }
-        [BsonElement("enabled")]
-        public bool? Enabled { get; set; }
-        [BsonElement("author")]
-        public string? Author { get; set; }
-
-        [BsonElement("createdOn")]
-        [JsonConverter(typeof(BsonDateConverter))]
-        public DateTimeOffset CreatedOn { get; set; }
-    }
+    [Key]
+    public string? BlogId { get; set; }
+    public string? Title { get; set; }
+    public string? Slug { get; set; }
+    public List<string?>? Tags { get; set; }
+    public string? Preview { get; set; }
+    public string? Content { get; set; }
+    public bool? Enabled { get; set; }
+    public string? Author { get; set; }
+    public DateTimeOffset CreatedOn { get; set; }
 }

@@ -1,4 +1,5 @@
-﻿using MongoDB.Driver;
+﻿using Eliassen.System.Text.Json.Serialization;
+using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace Eliassen.MongoDB.Extensions
     {
         private IMongoDatabase _database = null!;
         private IMongoSettings _settings = null!;
+        private IJsonSerializer _jsonSerializer = null!;
 
         private readonly Dictionary<MethodInfo, object> _collections = new();
 
@@ -25,12 +27,29 @@ namespace Eliassen.MongoDB.Extensions
                 return ret;
             }
 
-            var name = targetMethod.Name.StartsWith("get_") ? targetMethod.Name[4..] : targetMethod.Name;
+            //TODO: need to simplify this name logic with that on the DataloaderCommandFactory
+            var originalName = targetMethod.Name.StartsWith("get_") ? targetMethod.Name[4..] : targetMethod.Name;
 
-            name = targetMethod.DeclaringType?.GetProperty(name)
+            var name = targetMethod.DeclaringType?.GetProperty(originalName)
                 ?.GetCustomAttributes()
                 ?.OfType<CollectionNameAttribute>()
-                ?.FirstOrDefault()?.CollectionName ?? name;
+                ?.FirstOrDefault()?.CollectionName;
+
+            if (string.IsNullOrWhiteSpace(name) &&
+                targetMethod.ReturnType.IsGenericType)
+            {
+                var targetType = targetMethod.ReturnType.GetGenericArguments()[0];
+                name = targetType
+                   ?.GetCustomAttributes()
+                   ?.OfType<CollectionNameAttribute>()
+                   ?.FirstOrDefault()?.CollectionName;
+            }
+
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                name = originalName;
+                _jsonSerializer.AsPropertyName(originalName);
+            }
 
             var collectionType = targetMethod.ReturnType.GetGenericArguments()[0];
             var collection = _database.GetType()
@@ -52,11 +71,19 @@ namespace Eliassen.MongoDB.Extensions
             return collection;
         }
 
-        public static T Create<T>(IMongoDatabase database, IMongoSettings settings)
+        public static T Create<T>(
+            IMongoDatabase database,
+            IMongoSettings settings,
+            IJsonSerializer jsonSerializer
+            )
         {
             object instance = Create<T, MongoDispatchProxy>() ?? throw new NotSupportedException();
-            ((MongoDispatchProxy)instance)._database = database;
-            ((MongoDispatchProxy)instance)._settings = settings;
+
+            var proxy = (MongoDispatchProxy)instance;
+            proxy._database = database;
+            proxy._settings = settings;
+            proxy._jsonSerializer = jsonSerializer;
+
             return (T)instance;
         }
     }

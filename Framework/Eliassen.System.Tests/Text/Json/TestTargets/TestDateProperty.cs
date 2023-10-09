@@ -6,9 +6,9 @@ namespace Eliassen.System.Tests.Text.Json.TestTargets;
 
 public class TestDateProperty
 {
-    [JsonConverter(typeof(BsonDateConverter))]
+    [JsonConverter(typeof(BsonDateTimeOffsetConverter))]
     public DateTimeOffset? Nullable { get; set; }
 
-    [JsonConverter(typeof(BsonDateConverter))]
+    [JsonConverter(typeof(BsonDateTimeOffsetConverter))]
     public DateTimeOffset Value { get; set; }
 }

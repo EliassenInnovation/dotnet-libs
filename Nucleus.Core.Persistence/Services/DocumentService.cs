@@ -22,7 +22,6 @@ namespace Nucleus.Core.Persistence.Services
         {
             _db = db;
 
-
             _documentCollectionBuilder = new BsonCollectionBuilder<DocumentModel, DocumentCollection>();
             _documentProjection = Builders<DocumentCollection>.Projection.Expression(item => new DocumentModel()
             {

@@ -11,6 +11,10 @@ IF "%1"=="--no-start" (
 	SET DO_NOT_START=1
 	SHIFT
 )
+IF "%1"=="--no-run" (
+	SET DO_NOT_RUN=1
+	SHIFT
+)
 
 IF NOT "%1"=="" IF NOT "%TestFilter%"=="" SET TestFilter=
 
@@ -33,6 +37,8 @@ IF "%TestFilter%"=="" SET TestFilter=TestCategory=Unit^|TestCategory=Simulate
 ECHO "%TestFilter%"
 
 dotnet tool install --global dotnet-reportgenerator-globaltool 2>NUL
+
+IF '%DO_NOT_RUN%'=='' (
 RMDIR /S/Q ".\TestResults" 2>NUL
 MKDIR ".\TestResults\Coverage\Reports" 2>NUL
 
@@ -42,6 +48,7 @@ dotnet test "%TestProject%" ^
 --nologo ^
 --settings .runsettings ^
 --filter "%TestFilter%"
+)
 
 SET TEST_ERR=%ERRORLEVEL%
 
