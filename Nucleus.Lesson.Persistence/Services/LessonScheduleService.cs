@@ -27,12 +27,6 @@ namespace Nucleus.Lesson.Persistence.Services
             _lessonProjection = Builders<LessonScheduleCollection>.Projection.Expression(item => new LessonScheduleModel()
             {
                 LessonScheduleId = item.LessonScheduleId,
-                Title = item.Title,
-                Slug = item.Slug,
-                MediaLink = item.MediaLink,
-                PreviewImage = item.PreviewImage,
-                Preview = item.Preview,
-                Content = item.Content,
                 Enabled = item.Enabled,
                 CreatedOn = item.CreatedOn,
                 Teacher = new TeacherModel
@@ -120,12 +114,6 @@ namespace Nucleus.Lesson.Persistence.Services
             var result = query.Select(item => new LessonScheduleModel
             {
                 LessonScheduleId = item.LessonSchedule.LessonScheduleId,
-                Title = item.LessonSchedule.Title,
-                Slug = item.LessonSchedule.Slug,
-                MediaLink = item.LessonSchedule.MediaLink,
-                PreviewImage = item.LessonSchedule.PreviewImage,
-                Preview = item.LessonSchedule.Preview,
-                Content = item.LessonSchedule.Content,
                 Enabled = item.LessonSchedule.Enabled,
                 CreatedOn = item.LessonSchedule.CreatedOn,
                 Teacher = new TeacherModel

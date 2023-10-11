@@ -71,7 +71,7 @@ namespace Nucleus.Core.Shared.Business.Managers
                 foreach (LessonScheduleModel lesson in await _publicLessonScheduleManager.GetLessons())
                 {
                     xml.WriteStartElement("url");
-                    xml.WriteElementString("loc", host + "/lessonSchedule/" + lesson.Slug);
+                    xml.WriteElementString("loc", host + "/lessonSchedule/");
                     xml.WriteEndElement();
                 }
 
