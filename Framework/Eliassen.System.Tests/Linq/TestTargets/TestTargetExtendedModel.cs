@@ -50,7 +50,6 @@ public class TestTargetExtendedModel
     [Searchable]
     public string? May { get; set; }
 
-    //TODO: nullable array values can not be included in searchable
     public string[]? Modules { get; set; }
 
     [Searchable]

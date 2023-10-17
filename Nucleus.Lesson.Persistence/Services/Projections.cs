@@ -22,7 +22,7 @@ namespace Nucleus.Lesson.Persistence.Services
             LessonScheduleId = item.LessonScheduleId,
             Enabled = item.Enabled,
             CreatedOn = item.CreatedOn,
-            Teacher =new TeacherModel
+            Teacher = new TeacherModel
             {
                 EmailAddress = item.Teacher.EmailAddress,
                 FullName = item.Teacher.FullName,

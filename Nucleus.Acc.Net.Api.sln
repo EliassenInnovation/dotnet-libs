@@ -95,12 +95,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SampleData", "SampleData", 
 	ProjectSection(SolutionItems) = preProject
 		Conf\MongoDb\SampleData\blogs.json = Conf\MongoDb\SampleData\blogs.json
 		Conf\MongoDb\SampleData\documents.json = Conf\MongoDb\SampleData\documents.json
-		Conf\MongoDb\SampleData\lessons.json = Conf\MongoDb\SampleData\lessons.json
-		Conf\MongoDb\SampleData\lessonSchedule.json = Conf\MongoDb\SampleData\lessonSchedule.json
 		Conf\MongoDb\SampleData\modules.json = Conf\MongoDb\SampleData\modules.json
 		Conf\MongoDb\SampleData\projects.json = Conf\MongoDb\SampleData\projects.json
 		Conf\MongoDb\SampleData\users.json = Conf\MongoDb\SampleData\users.json
-		Conf\MongoDb\SampleData\vlogs.json = Conf\MongoDb\SampleData\vlogs.json
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pipelines", "Pipelines", "{39EF6F39-233A-4598-A953-8855B1399D92}"
