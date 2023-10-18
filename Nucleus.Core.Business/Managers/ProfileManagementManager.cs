@@ -1,10 +1,7 @@
-﻿using Nucleus.Core.Contracts.Managers;
+﻿using Microsoft.AspNetCore.Mvc;
+using Nucleus.Core.Contracts.Managers;
 using Nucleus.Core.Contracts.Models;
 using Nucleus.Core.Contracts.Persistence;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Nucleus.Core.Business.Managers
@@ -18,10 +15,9 @@ namespace Nucleus.Core.Business.Managers
             _profileService = profileService;
         }
 
-        public async Task<ResponseModel<User>> UpdateUserProfile(User user)
+        public async Task<bool> UpdateUserProfile(User user)
         {
-           //Going to return a success and not the model
-           //return await _profileService.UpdateUserProfile(user);
+           return await _profileService.UpdateUserProfile(user);
         }
     }
 }
