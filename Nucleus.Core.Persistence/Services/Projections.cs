@@ -33,6 +33,15 @@ namespace Nucleus.Core.Persistence.Services
                     }).ToList()
                 }).ToList()
             }).ToList(),
+            AddressLine1= user.AddressLine1,
+            AddressLine2= user.AddressLine2,
+            Bio = user.Bio,
+            City = user.City,
+            Country = user.Country,
+            StateProvince = user.StateProvince,
+            PhoneNumber = user.PhoneNumber,
+            Dob = user.Dob,
+            NotificationSettings = user.NotificationSettings,
             CreatedOn = user.CreatedOn
         };
     }

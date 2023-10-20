@@ -6,6 +6,6 @@ namespace Nucleus.Core.Contracts.Persistence
 {
     public interface IProfileService
     {
-        Task<bool> UpdateUserProfile(User user);
+        Task<ResponseModel<bool>> UpdateUserProfile(User user);
     }
 }

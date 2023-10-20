@@ -22,7 +22,7 @@ namespace Nucleus.Core.Persistence.Services
             _userCollectionBuilder = new BsonCollectionBuilder<User, UserCollection>();
         }
 
-        public async Task<bool> UpdateUserProfile(User user)
+        public async Task<ResponseModel<bool>> UpdateUserProfile(User user)
         {
             var filter = Builders<UserCollection>.Filter.Eq(u => u.UserId, user.UserId);
             var update = Builders<UserCollection>.Update
@@ -42,11 +42,19 @@ namespace Nucleus.Core.Persistence.Services
             var response = await _db.Users.UpdateOneAsync(filter, update, new UpdateOptions { IsUpsert = true });
             if(response.ModifiedCount > 0) 
             {
-                return true;
+                return new ResponseModel<bool>()
+                {
+                    IsSuccess = true,
+                    Message = "User Profile Updated!"
+                };
             }
             else 
-            {  
-                return false; 
+            {
+                return new ResponseModel<bool>()
+                {
+                    IsSuccess = false,
+                    Message = "Failed To Update User Profile"
+                };
             }
         }
 

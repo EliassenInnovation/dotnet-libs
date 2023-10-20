@@ -5,6 +5,6 @@ namespace Nucleus.Core.Contracts.Managers
 {
     public interface IProfileManagementManager
     {
-        Task<bool> UpdateUserProfile(User user);
+        Task<ResponseModel<bool>> UpdateUserProfile(User user);
     }
 }

@@ -74,7 +74,7 @@ namespace Nucleus.Core.Contracts.Models
 
         public string? PhoneNumber { get; set;}
 
-        public DateTimeOffset? Dob { get; set;}
+        public string? Dob { get; set;}
 
         public List<NotificationModel>? NotificationSettings { get; set;}
     }

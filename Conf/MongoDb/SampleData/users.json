@@ -120,7 +120,45 @@
     ],
     "createdOn": {
       "$date": "2017-09-20T12:43:50.435+00:00"
-    }
+    },
+    "addressLine1": "Address Line 1",
+    "addressLine2": "Address Line 2",
+    "bio": "This is my bio",
+    "city": "Belfast",
+    "country": {
+      "name": "Northern Ireland",
+      "code": "NI"
+    },
+    "stateProvince": {
+      "name": "Down",
+      "code": "DN",
+      "countryCode": "NI"
+    },
+    "phoneNumber": "020202020202",
+    "dob": "2000-01-01",
+    "notificationSettings": [
+      {
+        "formGroupName": "notificationType1",
+        "notification": "<p><strong>Notification #1:</strong><br/>This notification does this and will send a message every 7 days</p>",
+        "app": true,
+        "email": false,
+        "sms": false
+      },
+      {
+        "formGroupName": "notificationType2",
+        "notification": "<p><strong>Notification #1:</strong><br/>This notification does this and will send a message every 7 days</p>",
+        "app": false,
+        "email": false,
+        "sms": false
+      },
+      {
+        "formGroupName": "notificationType3",
+        "notification": "<p><strong>Notification #1:</strong><br/>This notification does this and will send a message every 7 days</p>",
+        "app": true,
+        "email": true,
+        "sms": true
+      }
+    ]
   },
   {
     "_id": {
@@ -203,7 +241,31 @@
     ],
     "createdOn": {
       "$date": "2023-05-23T17:20:01.286+00:00"
-    }
+    },
+    "addressLine1": "",
+    "addressLine2": "",
+    "bio": "This is my bio",
+    "city": "",
+    "country": {},
+    "stateProvince": {},
+    "phoneNumber": "",
+    "dob": "1996-01-01",
+    "notificationSettings": [
+      {
+        "formGroupName": "notificationType2",
+        "notification": "<p><strong>Notification #1:</strong><br/>This notification does this and will send a message every 7 days</p>",
+        "app": true,
+        "email": false,
+        "sms": false
+      },
+      {
+        "formGroupName": "notificationType3",
+        "notification": "<p><strong>Notification #1:</strong><br/>This notification does this and will send a message every 7 days</p>",
+        "app": true,
+        "email": false,
+        "sms": true
+      }
+    ]
   },
   {
     "_id": {
@@ -286,7 +348,45 @@
     ],
     "createdOn": {
       "$date": "2023-05-23T17:23:43.204+00:00"
-    }
+    },
+    "addressLine1": "",
+    "addressLine2": "",
+    "bio": "",
+    "city": "",
+    "country": {},
+    "stateProvince": {},
+    "phoneNumber": "",
+    "dob": "1971-08-01",
+    "notificationSettings": [
+      {
+        "formGroupName": "notificationType1",
+        "notification": "<p><strong>Notification #1:</strong><br/>This notification does this and will send a message every 7 days</p>",
+        "app": true,
+        "email": false,
+        "sms": false
+      },
+      {
+        "formGroupName": "notificationType2",
+        "notification": "<p><strong>Notification #1:</strong><br/>This notification does this and will send a message every 7 days</p>",
+        "app": false,
+        "email": false,
+        "sms": false
+      },
+      {
+        "formGroupName": "notificationType3",
+        "notification": "<p><strong>Notification #1:</strong><br/>This notification does this and will send a message every 7 days</p>",
+        "app": true,
+        "email": true,
+        "sms": true
+      },
+      {
+        "formGroupName": "notificationType4",
+        "notification": "<p><strong>Notification #1:</strong><br/>This notification does this and will send a message every 7 days</p>",
+        "app": true,
+        "email": true,
+        "sms": true
+      }
+    ]
   },
   {
     "_id": {
@@ -317,7 +417,16 @@
     ],
     "createdOn": {
       "$date": "2023-05-23T17:27:17.887+00:00"
-    }
+    },
+    "addressLine1": "",
+    "addressLine2": "",
+    "bio": "",
+    "city": "",
+    "country": {},
+    "stateProvince": {},
+    "phoneNumber": "",
+    "dob": "1985-09-01",
+    "notificationSettings": []
   },
   {
     "_id": {
@@ -400,7 +509,31 @@
     ],
     "createdOn": {
       "$date": "2023-05-23T17:28:43.828+00:00"
-    }
+    },
+    "addressLine1": "",
+    "addressLine2": "",
+    "bio": "",
+    "city": "",
+    "country": {},
+    "stateProvince": {},
+    "phoneNumber": "",
+    "dob": "2006-08-01",
+    "notificationSettings": [
+      {
+        "formGroupName": "notificationType1",
+        "notification": "<p><strong>Notification #1:</strong><br/>This notification does this and will send a message every 7 days</p>",
+        "app": false,
+        "email": false,
+        "sms": false
+      },
+      {
+        "formGroupName": "notificationType2",
+        "notification": "<p><strong>Notification #1:</strong><br/>This notification does this and will send a message every 7 days</p>",
+        "app": false,
+        "email": true,
+        "sms": false
+      }
+    ]
   },
   {
     "_id": {
@@ -451,7 +584,31 @@
     ],
     "createdOn": {
       "$date": "2023-05-23T17:29:58.135+00:00"
-    }
+    },
+    "addressLine1": "",
+    "addressLine2": "",
+    "bio": "",
+    "city": "",
+    "country": {},
+    "stateProvince": {},
+    "phoneNumber": "",
+    "dob": "1977-01-01",
+    "notificationSettings": [
+      {
+        "formGroupName": "notificationType1",
+        "notification": "<p><strong>Notification #1:</strong><br/>This notification does this and will send a message every 7 days</p>",
+        "app": true,
+        "email": false,
+        "sms": false
+      },
+      {
+        "formGroupName": "notificationType2",
+        "notification": "<p><strong>Notification #1:</strong><br/>This notification does this and will send a message every 7 days</p>",
+        "app": false,
+        "email": false,
+        "sms": false
+      }
+    ]
   },
   {
     "_id": {
@@ -502,6 +659,37 @@
     ],
     "createdOn": {
       "$date": "2023-05-23T17:30:55.995+00:00"
-    }
+    },
+    "addressLine1": "",
+    "addressLine2": "",
+    "bio": "",
+    "city": "",
+    "country": {},
+    "stateProvince": {},
+    "phoneNumber": "",
+    "dob": "2002-08-01",
+    "notificationSettings": [
+      {
+        "formGroupName": "notificationType1",
+        "notification": "<p><strong>Notification #1:</strong><br/>This notification does this and will send a message every 7 days</p>",
+        "app": true,
+        "email": false,
+        "sms": false
+      },
+      {
+        "formGroupName": "notificationType2",
+        "notification": "<p><strong>Notification #1:</strong><br/>This notification does this and will send a message every 7 days</p>",
+        "app": false,
+        "email": false,
+        "sms": false
+      },
+      {
+        "formGroupName": "notificationType3",
+        "notification": "<p><strong>Notification #1:</strong><br/>This notification does this and will send a message every 7 days</p>",
+        "app": true,
+        "email": true,
+        "sms": true
+      }
+    ]
   }
 ]

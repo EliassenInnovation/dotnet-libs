@@ -26,6 +26,6 @@ public class UserCollection
     public CountryModel? Country { get; set; }
     public StateModel? StateProvince { get; set; }
     public string? PhoneNumber { get; set; }
-    public DateTimeOffset? Dob { get; set; }
+    public string? Dob { get; set; }
     public List<NotificationModel>? NotificationSettings { get; set; }
 }

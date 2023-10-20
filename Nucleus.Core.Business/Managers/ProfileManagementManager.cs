@@ -15,7 +15,7 @@ namespace Nucleus.Core.Business.Managers
             _profileService = profileService;
         }
 
-        public async Task<bool> UpdateUserProfile(User user)
+        public async Task<ResponseModel<bool>> UpdateUserProfile(User user)
         {
            return await _profileService.UpdateUserProfile(user);
         }
