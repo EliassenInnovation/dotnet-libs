@@ -59,5 +59,23 @@ namespace Nucleus.Core.Contracts.Models
                 { Role , e => e.UserModules.Any(um => um.Roles.Any(r => r.Code.Equals(value))) },
                 { UserStatus, e => value.Equals("-1") || e.Active == value.Equals("1") },
             }.TryGetValue(key, out var exp) ? exp : null;
+
+        public string? AddressLine1 { get; set; }
+
+        public string? AddressLine2 { get; set;}
+
+        public string? Bio { get; set;}
+
+        public string? City { get; set;}
+
+        public CountryModel? Country { get; set;}
+
+        public StateModel? StateProvince { get; set;}
+
+        public string? PhoneNumber { get; set;}
+
+        public string? Dob { get; set;}
+
+        public List<NotificationModel>? NotificationSettings { get; set;}
     }
 }
