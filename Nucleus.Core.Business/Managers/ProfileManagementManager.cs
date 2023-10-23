@@ -19,5 +19,10 @@ namespace Nucleus.Core.Business.Managers
         {
            return await _profileService.UpdateUserProfile(user);
         }
+
+        public async Task<ResponseModel<User>> GetUserProfile(string userName)
+        {
+            return await _profileService.GetUserProfile(userName);
+        }
     }
 }

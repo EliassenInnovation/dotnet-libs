@@ -29,8 +29,20 @@ namespace Nucleus.Core.Controllers.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateUserProfile(User user)
         {
-            var response = await _profileManagementManager.UpdateUserProfile(user);
-            return Ok(response);
+            return Ok(await _profileManagementManager.UpdateUserProfile(user));
         }
+
+        /// <summary>
+        /// Get the updated user profile details
+        /// </summary>        
+        /// <param name="userName">This is the guid from b2c</param>
+        /// <returns> The User Profile in its most recent state </returns>
+        [Authorize]
+        [HttpGet("{id}")]
+        public async Task<ResponseModel<User>> GetUserProfile(string id)
+        {
+            return await _profileManagementManager.GetUserProfile(id);
+        }
+
     }
 }

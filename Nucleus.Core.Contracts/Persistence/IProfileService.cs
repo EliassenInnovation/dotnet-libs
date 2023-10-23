@@ -7,5 +7,7 @@ namespace Nucleus.Core.Contracts.Persistence
     public interface IProfileService
     {
         Task<ResponseModel<bool>> UpdateUserProfile(User user);
+
+        Task<ResponseModel<User>> GetUserProfile(string userName);
     }
 }

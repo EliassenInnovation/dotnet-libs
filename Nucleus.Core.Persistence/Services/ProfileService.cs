@@ -14,13 +14,18 @@ namespace Nucleus.Core.Persistence.Services
     public class ProfileService : IProfileService
     {
         private readonly ICoreMongoDatabase _db;
+        private readonly ProjectionDefinition<UserCollection, User>? _userProjection;
         private readonly BsonCollectionBuilder<User, UserCollection> _userCollectionBuilder;
 
         public ProfileService(ICoreMongoDatabase db)
         {
             _db = db;
             _userCollectionBuilder = new BsonCollectionBuilder<User, UserCollection>();
+            _userProjection = Builders<UserCollection>.Projection.Expression(Projections.Users);
         }
+
+        public IQueryable<User> Query() => _db.Users.AsQueryable().Select(Projections.Users);
+
 
         public async Task<ResponseModel<bool>> UpdateUserProfile(User user)
         {
@@ -54,6 +59,28 @@ namespace Nucleus.Core.Persistence.Services
                 {
                     IsSuccess = false,
                     Message = "Failed To Update User Profile"
+                };
+            }
+        }
+
+        public async Task<ResponseModel<User>> GetUserProfile(string userName)
+        {
+            var user = await Task.FromResult(Query().FirstOrDefault(u => u.UserName.ToLower() == userName.ToLower()));
+
+            if (user != null)
+            {
+                return new ResponseModel<User>()
+                {
+                    IsSuccess = true,
+                    Response = user
+                };
+            }
+            else
+            {
+                return new ResponseModel<User>()
+                {
+                    IsSuccess = false,
+                    Message = "Failed To Fetch User Profile"
                 };
             }
         }
