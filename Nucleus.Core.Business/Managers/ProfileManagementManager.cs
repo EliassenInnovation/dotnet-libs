@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Nucleus.Core.Contracts.Managers;
+﻿using Nucleus.Core.Contracts.Managers;
 using Nucleus.Core.Contracts.Models;
 using Nucleus.Core.Contracts.Persistence;
 using System.Threading.Tasks;

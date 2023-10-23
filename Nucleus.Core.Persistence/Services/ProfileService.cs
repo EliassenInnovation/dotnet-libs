@@ -3,10 +3,7 @@ using Nucleus.Core.Contracts.Models;
 using Nucleus.Core.Contracts.Persistence;
 using Nucleus.Core.Persistence.Collections;
 using Nucleus.Core.Shared.Persistence.Services.ServiceHelpers;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Nucleus.Core.Persistence.Services
@@ -44,7 +41,7 @@ namespace Nucleus.Core.Persistence.Services
                 .Set(u => u.NotificationSettings, user.NotificationSettings)
                 .Set(u => u.Dob, user.Dob);
 
-            var response = await _db.Users.UpdateOneAsync(filter, update, new UpdateOptions { IsUpsert = true });
+            var response = await _db.Users.UpdateOneAsync(filter, update);
             if(response.ModifiedCount > 0) 
             {
                 return new ResponseModel<bool>()
