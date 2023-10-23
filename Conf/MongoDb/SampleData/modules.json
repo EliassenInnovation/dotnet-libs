@@ -49,28 +49,6 @@
   },
   {
     "_id": {
-      "$oid": "646cfd1ab7f1713dab0fb867"
-    },
-    "roles": [
-      {
-        "rights": [
-          {
-            "name": "Lesson Vlog Manager",
-            "code": "right_vlog_admin"
-          }
-        ],
-        "name": "Lesson Vlog Admin",
-        "code": "role_vlog"
-      }
-    ],
-    "createdOn": {
-      "$date": "2023-06-09T20:08:56.213+00:00"
-    },
-    "name": "Lessons Vlog",
-    "code": "module_vlog"
-  },
-  {
-    "_id": {
       "$oid": "646cfd1ab7f1713dab0fb868"
     },
     "roles": [

@@ -50,22 +50,6 @@
           {
             "rights": [
               {
-                "name": "Lesson Vlog Manager",
-                "code": "right_vlog_admin"
-              }
-            ],
-            "name": "Lesson Vlog Admin",
-            "code": "role_vlog"
-          }
-        ],
-        "name": "Lessons Vlog",
-        "code": "module_vlog"
-      },
-      {
-        "roles": [
-          {
-            "rights": [
-              {
                 "name": "Tee Times Manager",
                 "code": "right_teetimes_admin"
               }
@@ -191,22 +175,6 @@
           {
             "rights": [
               {
-                "name": "Lesson Vlog Manager",
-                "code": "right_vlog_admin"
-              }
-            ],
-            "name": "Lesson Vlog Admin",
-            "code": "role_vlog"
-          }
-        ],
-        "name": "Lessons Vlog",
-        "code": "module_vlog"
-      },
-      {
-        "roles": [
-          {
-            "rights": [
-              {
                 "name": "Tee Times Manager",
                 "code": "right_teetimes_admin"
               }
@@ -292,22 +260,6 @@
         ],
         "name": "Blog",
         "code": "module_blog"
-      },
-      {
-        "roles": [
-          {
-            "rights": [
-              {
-                "name": "Lesson Vlog Manager",
-                "code": "right_vlog_admin"
-              }
-            ],
-            "name": "Lesson Vlog Admin",
-            "code": "role_vlog"
-          }
-        ],
-        "name": "Lessons Vlog",
-        "code": "module_vlog"
       },
       {
         "roles": [
@@ -453,22 +405,6 @@
         ],
         "name": "Blog",
         "code": "module_blog"
-      },
-      {
-        "roles": [
-          {
-            "rights": [
-              {
-                "name": "Lesson Vlog Manager",
-                "code": "right_vlog_admin"
-              }
-            ],
-            "name": "Lesson Vlog Admin",
-            "code": "role_vlog"
-          }
-        ],
-        "name": "Lessons Vlog",
-        "code": "module_vlog"
       },
       {
         "roles": [
