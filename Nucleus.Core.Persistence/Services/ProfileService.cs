@@ -33,6 +33,7 @@ namespace Nucleus.Core.Persistence.Services
                 .Set(u => u.Active, user.Active)
                 .Set(u => u.AddressLine1, user.AddressLine1)
                 .Set(u => u.AddressLine2, user.AddressLine2)
+                .Set(u => u.PostalCode, user.PostalCode)
                 .Set(u => u.Bio, user.Bio)
                 .Set(u => u.City, user.City)
                 .Set(u => u.Country, user.Country)
