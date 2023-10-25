@@ -64,6 +64,8 @@ namespace Nucleus.Core.Contracts.Models
 
         public string? AddressLine2 { get; set;}
 
+        public string? PostalCode { get; set; }
+
         public string? Bio { get; set;}
 
         public string? City { get; set;}

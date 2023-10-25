@@ -33,8 +33,9 @@ namespace Nucleus.Core.Persistence.Services
                     }).ToList()
                 }).ToList()
             }).ToList(),
-            AddressLine1= user.AddressLine1,
-            AddressLine2= user.AddressLine2,
+            AddressLine1 = user.AddressLine1,
+            AddressLine2 = user.AddressLine2,
+            PostalCode = user.PostalCode,
             Bio = user.Bio,
             City = user.City,
             Country = user.Country,
