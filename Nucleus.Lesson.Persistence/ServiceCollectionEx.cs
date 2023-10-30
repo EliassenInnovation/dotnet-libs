@@ -14,6 +14,7 @@ namespace Nucleus.Lesson.Persistence
 
             services.TryAddTransient<ILessonScheduleService, LessonScheduleService>();
             services.TryAddTransient<ILessonService, LessonService>();
+            services.TryAddTransient<ILessonsCalendarService, LessonsCalendarService>();
             return services;
         }
     }

@@ -13,6 +13,7 @@ namespace Nucleus.Lesson.Business
             services.TryAddTransient<ILessonScheduleManager, LessonScheduleManager>();
             services.TryAddTransient<IPublicLessonManager, PublicLessonManager>();
             services.TryAddTransient<IPublicLessonScheduleManager, PublicLessonScheduleManager>();
+            services.TryAddTransient<ILessonsCalendarManager, LessonsCalendarManager>();
             return services;
         }
     }
