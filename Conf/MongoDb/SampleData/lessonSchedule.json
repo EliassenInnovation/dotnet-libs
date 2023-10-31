@@ -23,7 +23,7 @@
     "price": 1.91,
     "goals": [],
     "startDateTime": {
-      "$date": "2017-09-20T10:40:50.435+00:00"
+      "$date": "2023-09-20T12:43:50.435+00:00"
     },
     "endDateTime": null,
     "repeat": "weekly"
@@ -52,7 +52,7 @@
     "price": 1.93,
     "goals": [],
     "startDateTime": {
-      "$date": "2017-09-20T05:40:50.435+00:00"
+      "$date": "2023-10-20T09:00:50.435+00:00"
     },
     "endDateTime": null,
     "repeat": "weekly"
@@ -98,7 +98,7 @@
     "content": "",
     "enabled": true,
     "createdOn": {
-      "$date": "2017-09-20T12:43:50.435+00:00"
+      "$date": "2023-10-20T09:00:50.435+00:00"
     },
     "teacher": {
       "userId": "646cf7cbfe22b3a795d90a92",
@@ -139,7 +139,7 @@
     "price": 1.44,
     "goals": [],
     "startDateTime": {
-      "$date": "2017-09-18T07:43:50.435+00:00"
+      "$date": "2023-10-25T09:00:00.435+00:00"
     },
     "endDateTime": null,
     "repeat": "monthly"
@@ -168,7 +168,7 @@
     "price": 1.01,
     "goals": [],
     "startDateTime": {
-      "$date": "2015-09-20T11:49:50.435+00:00"
+      "$date": "2023-10-05T09:00:00.435+00:00"
     },
     "endDateTime": null,
     "repeat": "monthly"
@@ -226,7 +226,7 @@
     "price": 1.99,
     "goals": [],
     "startDateTime": {
-      "$date": "2022-09-20T12:43:50.435+00:00"
+      "$date": "2023-10-09T12:43:50.435+00:00"
     },
     "endDateTime": null,
     "repeat": "weekly"
@@ -255,7 +255,7 @@
     "price": 1.99,
     "goals": [],
     "startDateTime": {
-      "$date": "2017-04-13T10:10:50.435+00:00"
+      "$date": "2023-11-09T12:43:50.435+00:00"
     },
     "endDateTime": null,
     "repeat": "daily"
@@ -286,7 +286,7 @@
     "price": 14.99,
     "goals": [],
     "startDateTime": {
-      "$date": "2017-05-12T11:13:50.435+00:00"
+      "$date": "2023-12-09T12:43:50.435+00:00"
     },
     "endDateTime": null,
     "repeat": "daily"
@@ -317,7 +317,7 @@
     "price": 11.99,
     "goals": [],
     "startDateTime": {
-      "$date": "2017-07-20T11:13:50.435+00:00"
+      "$date": "2023-07-09T12:43:50.435+00:00"
     },
     "endDateTime": null,
     "repeat": "weekly"

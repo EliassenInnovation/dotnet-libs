@@ -48,7 +48,7 @@ namespace Nucleus.Lesson.Persistence.Services
             DateTimeOffset endDateTimeOffset = new DateTimeOffset(endDate, TimeSpan.Zero);
 
             var query = from lessonSchedule in _db.LessonSchedule.AsQueryable()
-                        where lessonSchedule.StartDateTime.Value >= startDateTimeOffset && lessonSchedule.EndDateTime.Value <= endDateTimeOffset
+                        where lessonSchedule.StartDateTime.Value >= startDateTimeOffset && lessonSchedule.StartDateTime.Value <= endDateTimeOffset
                         join lesson in _db.Lessons.AsQueryable() on lessonSchedule.LessonScheduleId equals lesson.LessonScheduleId into lessons
                         from lesson in lessons.DefaultIfEmpty()
                         select new
@@ -63,7 +63,7 @@ namespace Nucleus.Lesson.Persistence.Services
                 Title = item.LessonSchedule.Title,
                 Tags = item.LessonSchedule.Tags,
                 StartDateTime = item.Lesson.LessonDateTime != null ? item.Lesson.LessonDateTime : item.LessonSchedule.StartDateTime,
-                EndDateTime = item.LessonSchedule.EndDateTime,
+                EndDateTime = item.Lesson.LessonDateTime.HasValue ? item.Lesson.LessonDateTime.Value.DateTime.AddMinutes((double)item.LessonSchedule.Duration) : item.LessonSchedule.EndDateTime.Value,
                 DurationEditable = true,
                 AvailableToBook = item.LessonSchedule.LessonScheduleId == item.Lesson.LessonScheduleId ? false : true,
                 Pro = item.LessonSchedule.Teacher.FullName,
