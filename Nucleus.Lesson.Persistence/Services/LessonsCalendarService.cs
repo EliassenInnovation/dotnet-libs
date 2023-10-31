@@ -1,4 +1,5 @@
-﻿using MongoDB.Driver;
+﻿using MongoDB.Bson.Serialization;
+using MongoDB.Driver;
 using MongoDB.Driver.Linq;
 using Nucleus.Core.Shared.Persistence.Services.ServiceHelpers;
 using Nucleus.Lesson.Contracts.Collections;
@@ -43,14 +44,13 @@ namespace Nucleus.Lesson.Persistence.Services
         {
             DateTime startDate = new DateTime(calendarRequest.year, calendarRequest.month + 1, 1);
             DateTime endDate = startDate.AddMonths(1).AddDays(-1);
-            DateTimeOffset startDateTimeOffset = new DateTimeOffset(startDate);
-            DateTimeOffset endDateTimeOffset = new DateTimeOffset(endDate);
+            DateTimeOffset startDateTimeOffset = new DateTimeOffset(startDate, TimeSpan.Zero);
+            DateTimeOffset endDateTimeOffset = new DateTimeOffset(endDate, TimeSpan.Zero);
 
             var query = from lessonSchedule in _db.LessonSchedule.AsQueryable()
+                        where lessonSchedule.StartDateTime.Value >= startDateTimeOffset && lessonSchedule.EndDateTime.Value <= endDateTimeOffset
                         join lesson in _db.Lessons.AsQueryable() on lessonSchedule.LessonScheduleId equals lesson.LessonScheduleId into lessons
                         from lesson in lessons.DefaultIfEmpty()
-                        where (lessonSchedule.StartDateTime.Value >= startDateTimeOffset && lessonSchedule.StartDateTime.Value <= endDateTimeOffset)
-                        || (lesson.LessonDateTime.Value >= startDateTimeOffset && lesson.LessonDateTime.Value <= endDateTimeOffset)
                         select new
                         {
                             LessonSchedule = lessonSchedule,
@@ -65,12 +65,25 @@ namespace Nucleus.Lesson.Persistence.Services
                 StartDateTime = item.Lesson.LessonDateTime != null ? item.Lesson.LessonDateTime : item.LessonSchedule.StartDateTime,
                 EndDateTime = item.LessonSchedule.EndDateTime,
                 DurationEditable = true,
-                AvailableToBook = item.Lesson == null ? true : false,
+                AvailableToBook = item.LessonSchedule.LessonScheduleId == item.Lesson.LessonScheduleId ? false : true,
                 Pro = item.LessonSchedule.Teacher.FullName,
                 Repeat = item.LessonSchedule.Repeat
             }).AsQueryable();
 
             return result;
         }
+
+        public DateTimeOffset calculateEndDate(DateTimeOffset lessonDate, LessonScheduleCollection lessonSchedule)
+        {
+            if (lessonDate != null)
+            {
+                var x = Convert.ToDouble(lessonSchedule.Duration);
+                return lessonDate.AddMinutes(x);
+            }
+
+            return lessonSchedule.StartDateTime.Value;
+        }
+
     }
+
 }
