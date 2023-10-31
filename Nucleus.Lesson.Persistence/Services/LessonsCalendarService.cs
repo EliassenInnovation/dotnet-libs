@@ -42,11 +42,14 @@ namespace Nucleus.Lesson.Persistence.Services
 
         public async Task<IQueryable<LessonsCalendarModel>> GetLessons(LessonsCalendarRequestModel calendarRequest)
         {
+            /* The implementation of this is likely to change when the scheduling comes into play */
             DateTime startDate = new DateTime(calendarRequest.year, calendarRequest.month + 1, 1);
             DateTime endDate = startDate.AddMonths(1).AddDays(-1);
             DateTimeOffset startDateTimeOffset = new DateTimeOffset(startDate, TimeSpan.Zero);
             DateTimeOffset endDateTimeOffset = new DateTimeOffset(endDate, TimeSpan.Zero);
 
+            /* You need to get any lessonSchedules that start in the current month as the end date could be month */
+            /* We join on these ids to see if there is any corresponding lessons so we can check if the lessonSchedule has been booked */
             var query = from lessonSchedule in _db.LessonSchedule.AsQueryable()
                         where lessonSchedule.StartDateTime.Value >= startDateTimeOffset && lessonSchedule.StartDateTime.Value <= endDateTimeOffset
                         join lesson in _db.Lessons.AsQueryable() on lessonSchedule.LessonScheduleId equals lesson.LessonScheduleId into lessons
@@ -57,13 +60,15 @@ namespace Nucleus.Lesson.Persistence.Services
                             Lesson = lesson
                         };
 
+            /* TODO - When a user books a lessonSchedule calculate the end time based on duration and assign this to lesson */
+            /* The end time of this object should be the end time of the lesson if its booked */
             var result = query.Select(item => new LessonsCalendarModel
             {
                 LessonScheduleId = item.LessonSchedule.LessonScheduleId,
                 Title = item.LessonSchedule.Title,
                 Tags = item.LessonSchedule.Tags,
                 StartDateTime = item.Lesson.LessonDateTime != null ? item.Lesson.LessonDateTime : item.LessonSchedule.StartDateTime,
-                EndDateTime = item.Lesson.LessonDateTime.HasValue ? item.Lesson.LessonDateTime.Value.DateTime.AddMinutes((double)item.LessonSchedule.Duration) : item.LessonSchedule.EndDateTime.Value,
+                EndDateTime = item.LessonSchedule.EndDateTime,
                 DurationEditable = true,
                 AvailableToBook = item.LessonSchedule.LessonScheduleId == item.Lesson.LessonScheduleId ? false : true,
                 Pro = item.LessonSchedule.Teacher.FullName,
@@ -72,18 +77,6 @@ namespace Nucleus.Lesson.Persistence.Services
 
             return result;
         }
-
-        public DateTimeOffset calculateEndDate(DateTimeOffset lessonDate, LessonScheduleCollection lessonSchedule)
-        {
-            if (lessonDate != null)
-            {
-                var x = Convert.ToDouble(lessonSchedule.Duration);
-                return lessonDate.AddMinutes(x);
-            }
-
-            return lessonSchedule.StartDateTime.Value;
-        }
-
     }
 
 }

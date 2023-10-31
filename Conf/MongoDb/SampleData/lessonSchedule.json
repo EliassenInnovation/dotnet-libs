@@ -23,9 +23,9 @@
     "price": 1.91,
     "goals": [],
     "startDateTime": {
-      "$date": "2023-09-20T12:43:50.435+00:00"
+      "$date": "2023-09-20T12:45:00.435+00:00"
     },
-    "endDateTime": null,
+    "endDateTime": "2023-09-20T10:00:00.435+00:00",
     "repeat": "weekly"
   },
   {
@@ -54,7 +54,7 @@
     "startDateTime": {
       "$date": "2023-10-20T09:00:50.435+00:00"
     },
-    "endDateTime": null,
+    "endDateTime": "2023-10-20T09:20:50.435+00:00",
     "repeat": "weekly"
   },
   {
@@ -81,9 +81,9 @@
     "price": 1.78,
     "goals": [],
     "startDateTime": {
-      "$date": "2016-09-20T01:43:50.435+00:00"
+      "$date": "2023-09-20T12:40:50.435+00:00"
     },
-    "endDateTime": null,
+    "endDateTime": "2023-09-20T13:05:50.435+00:00",
     "repeat": "daily"
   },
   {
@@ -110,9 +110,9 @@
     "price": 1.66,
     "goals": [],
     "startDateTime": {
-      "$date": "2017-07-20T11:43:50.435+00:00"
+      "$date": "2023-09-20T16:40:50.435+00:00"
     },
-    "endDateTime": null,
+    "endDateTime": "2023-09-20T16:25:50.435+00:00",
     "repeat": "monthly"
   },
   {
@@ -141,7 +141,7 @@
     "startDateTime": {
       "$date": "2023-10-25T09:00:00.435+00:00"
     },
-    "endDateTime": null,
+    "endDateTime": "2023-10-25T09:50:00.435+00:00",
     "repeat": "monthly"
   },
   {
@@ -170,7 +170,7 @@
     "startDateTime": {
       "$date": "2023-10-05T09:00:00.435+00:00"
     },
-    "endDateTime": null,
+    "endDateTime": "2023-10-05T09:55:00.435+00:00",
     "repeat": "monthly"
   },
   {
@@ -199,7 +199,7 @@
     "startDateTime": {
       "$date": "2023-09-20T12:43:50.435+00:00"
     },
-    "endDateTime": null,
+    "endDateTime": "2023-09-20T13:48:50.435+00:00",
     "repeat": "weekly"
   },
   {
@@ -228,7 +228,7 @@
     "startDateTime": {
       "$date": "2023-10-09T12:43:50.435+00:00"
     },
-    "endDateTime": null,
+    "endDateTime": "2023-10-09T14:33:50.435+00:00",
     "repeat": "weekly"
   },
   {
@@ -257,7 +257,7 @@
     "startDateTime": {
       "$date": "2023-11-09T12:43:50.435+00:00"
     },
-    "endDateTime": null,
+    "endDateTime": "2023-11-09T12:53:50.435+00:00",
     "repeat": "daily"
   },
   {
@@ -288,7 +288,7 @@
     "startDateTime": {
       "$date": "2023-12-09T12:43:50.435+00:00"
     },
-    "endDateTime": null,
+    "endDateTime": "2023-12-09T14:23:50.435+00:00",
     "repeat": "daily"
   },
   {
@@ -319,7 +319,7 @@
     "startDateTime": {
       "$date": "2023-07-09T12:43:50.435+00:00"
     },
-    "endDateTime": null,
+    "endDateTime": "2023-07-09T12:58:50.435+00:00",
     "repeat": "weekly"
   }
 ]
