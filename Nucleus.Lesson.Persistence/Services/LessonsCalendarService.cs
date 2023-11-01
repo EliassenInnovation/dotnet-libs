@@ -1,7 +1,6 @@
 ﻿using MongoDB.Driver;
 using MongoDB.Driver.Linq;
 using Nucleus.Core.Shared.Persistence.Services.ServiceHelpers;
-using Nucleus.Lesson.Contracts.Collections;
 using Nucleus.Lesson.Contracts.Models;
 using Nucleus.Lesson.Contracts.Persistence;
 using Nucleus.Lesson.Persistence.Collections;
