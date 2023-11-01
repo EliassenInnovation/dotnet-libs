@@ -7,7 +7,7 @@
       "$oid": "647f5966e7abf8eb062387e5"
     },
     "lessonDateTime": {
-      "$date": "2017-09-20T12:43:50.435+00:00"
+      "$date": "2023-09-20T12:00:00.435+00:00"
     },
     "student": "James Bluff",
     "notes": "Working on hitting straight",
@@ -21,7 +21,7 @@
       "$oid": "647f5966e7abf8eb062387e5"
     },
     "lessonDateTime": {
-      "$date": "2017-09-22T12:43:50.435+00:00"
+      "$date": "2023-09-20T13:00:00.435+00:00"
     },
     "student": null,
     "notes": null,
@@ -32,10 +32,10 @@
       "$oid": "567f1236e7abf8eb062387e5"
     },
     "lessonScheduleId": {
-      "$oid": "647f5966e7abf8eb062387e5"
+      "$oid": "647f5966e7abf8eb062387e6"
     },
     "lessonDateTime": {
-      "$date": "2017-09-24T12:43:50.435+00:00"
+      "$date": "2023-10-20T09:00:50.435+00:00"
     },
     "student": "Cindy Green",
     "notes": null,
