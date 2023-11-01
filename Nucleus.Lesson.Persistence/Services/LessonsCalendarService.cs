@@ -1,5 +1,4 @@
-﻿using MongoDB.Bson.Serialization;
-using MongoDB.Driver;
+﻿using MongoDB.Driver;
 using MongoDB.Driver.Linq;
 using Nucleus.Core.Shared.Persistence.Services.ServiceHelpers;
 using Nucleus.Lesson.Contracts.Collections;
@@ -8,7 +7,6 @@ using Nucleus.Lesson.Contracts.Persistence;
 using Nucleus.Lesson.Persistence.Collections;
 using System;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Nucleus.Lesson.Persistence.Services
 {
@@ -40,7 +38,7 @@ namespace Nucleus.Lesson.Persistence.Services
 
         public IQueryable<LessonsCalendarModel> Query() => _db.LessonSchedule.AsQueryable().Select(Projections.LessonsCalendar);
 
-        public async Task<IQueryable<LessonsCalendarModel>> GetLessons(LessonsCalendarRequestModel calendarRequest)
+        public IQueryable<LessonsCalendarModel> GetLessons(LessonsCalendarRequestModel calendarRequest)
         {
             /* The implementation of this is likely to change when the scheduling comes into play */
             DateTime startDate = new DateTime(calendarRequest.year, calendarRequest.month + 1, 1);

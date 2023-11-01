@@ -23,7 +23,7 @@ namespace Nucleus.Lesson.Controllers.Controllers
         }
 
         [HttpPost]
-        public Task<IQueryable<LessonsCalendarModel>> GetLessonsByMonth(LessonsCalendarRequestModel calendarRequest) => 
+        public IReadOnlyCollection<LessonsCalendarModel> GetLessonsByMonth(LessonsCalendarRequestModel calendarRequest) => 
             _lessonsCalendarManager.GetLessonsByMonth(calendarRequest);
     }
 }
