@@ -17,6 +17,7 @@ namespace Nucleus.Lesson.Persistence.Services
             PaymentStatus = item.PaymentStatus
             
         };
+
         public static Expression<Func<LessonScheduleCollection, LessonScheduleModel>> LessonSchedule => item => new LessonScheduleModel()
         {
             LessonScheduleId = item.LessonScheduleId,
@@ -33,6 +34,19 @@ namespace Nucleus.Lesson.Persistence.Services
             Tags = item.Tags,
             StartDateTime = item.StartDateTime,
             EndDateTime = item.EndDateTime,
+            Repeat = item.Repeat
+        };
+
+        public static Expression<Func<LessonScheduleCollection, LessonsCalendarModel>> LessonsCalendar => item => new LessonsCalendarModel()
+        {
+            LessonScheduleId = item.LessonScheduleId,
+            Title = item.Title,
+            Pro = item.Teacher.FullName,
+            Tags = item.Tags,
+            StartDateTime = item.StartDateTime,
+            EndDateTime = item.EndDateTime,
+            DurationEditable = true,
+            AvailableToBook = true,
             Repeat = item.Repeat
         };
     }
