@@ -31,5 +31,7 @@ namespace Nucleus.Lesson.Contracts.Models
         public string? Pro { get; set; }
 
         public double? Price { get; set; }
+
+        public string? Student { get; set; }
     }
 }

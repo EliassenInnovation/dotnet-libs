@@ -72,7 +72,8 @@ namespace Nucleus.Lesson.Persistence.Services
                 AvailableToBook = item.LessonSchedule.LessonScheduleId == item.Lesson.LessonScheduleId ? false : true,
                 Pro = item.LessonSchedule.Teacher.FullName,
                 Repeat = item.LessonSchedule.Repeat,
-                Price = item.LessonSchedule.Price
+                Price = item.LessonSchedule.Price,
+                Student = item.Lesson.Student
             }).AsQueryable();
 
             return result;
