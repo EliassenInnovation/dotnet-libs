@@ -34,6 +34,7 @@ namespace Nucleus.Lesson.Persistence.Services
                 Pro = item.Teacher.FullName,
                 Repeat = item.Repeat,
                 Price = item.Price,
+                Duration = item.Duration,
             });
         }
 
@@ -73,7 +74,8 @@ namespace Nucleus.Lesson.Persistence.Services
                 Pro = item.LessonSchedule.Teacher.FullName,
                 Repeat = item.LessonSchedule.Repeat,
                 Price = item.LessonSchedule.Price,
-                Student = item.Lesson.Student
+                Student = item.Lesson.Student,
+                Duration = item.LessonSchedule.Duration,
             }).AsQueryable();
 
             return result;
