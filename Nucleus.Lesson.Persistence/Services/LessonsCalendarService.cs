@@ -7,6 +7,7 @@ using Nucleus.Lesson.Contracts.Persistence;
 using Nucleus.Lesson.Persistence.Collections;
 using System;
 using System.Linq;
+using static Nucleus.Core.Contracts.Rights;
 
 namespace Nucleus.Lesson.Persistence.Services
 {
@@ -62,6 +63,7 @@ namespace Nucleus.Lesson.Persistence.Services
             /* The end time of this object should be the end time of the lesson if its booked */
             var result = query.Select(item => new LessonsCalendarModel
             {
+                LessonId = item.Lesson.LessonId,
                 LessonScheduleId = item.LessonSchedule.LessonScheduleId,
                 Title = item.LessonSchedule.Title,
                 Tags = item.LessonSchedule.Tags,
