@@ -491,6 +491,35 @@
     },
     "endDateTime": "2023-09-05T12:58:50.435+00:00",
     "repeat": "weekly"
+  },
+  {
+    "_id": {
+      "$oid": "647f5966e7abf8eb06238726"
+    },
+    "title": " 19 How to always win no matter what happens. 100% winrate guaranteed!",
+    "slug": "allen@nodirection.com",
+    "mediaLink": "Allen",
+    "previewImage": "Butler",
+    "preview": "",
+    "content": "",
+    "enabled": true,
+    "createdOn": {
+      "$date": "2017-09-20T12:43:50.435+00:00"
+    },
+    "teacher": {
+      "userId": "646cf84ffe22b3a795d90a94",
+      "fullName": "Tommy Gilmore",
+      "emailAddress": "tommygilmore@eliassen.com"
+    },
+    "duration": 15,
+    "tags": ["Full Swing Wood", "Full Swing Iron", "Short Game", "Driving"],
+    "price": 11.99,
+    "goals": [],
+    "startDateTime": {
+      "$date": "2023-09-20T12:43:50.435+00:00"
+    },
+    "endDateTime": "2023-09-20T12:58:50.435+00:00",
+    "repeat": "weekly"
   }
 
 ]
