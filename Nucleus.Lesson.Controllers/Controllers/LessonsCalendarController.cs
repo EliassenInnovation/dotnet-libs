@@ -2,11 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Nucleus.Lesson.Contracts.Managers;
 using Nucleus.Lesson.Contracts.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Nucleus.Lesson.Controllers.Controllers
 {

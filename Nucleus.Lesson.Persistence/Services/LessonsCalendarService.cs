@@ -7,7 +7,6 @@ using Nucleus.Lesson.Contracts.Persistence;
 using Nucleus.Lesson.Persistence.Collections;
 using System;
 using System.Linq;
-using static Nucleus.Core.Contracts.Rights;
 
 namespace Nucleus.Lesson.Persistence.Services
 {
