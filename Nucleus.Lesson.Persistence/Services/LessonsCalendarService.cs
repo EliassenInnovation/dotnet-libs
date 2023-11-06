@@ -52,7 +52,7 @@ namespace Nucleus.Lesson.Persistence.Services
                         where lessonSchedule.StartDateTime.Value >= startDateTimeOffset && lessonSchedule.StartDateTime.Value <= endDateTimeOffset
                         join lesson in _db.Lessons.AsQueryable() on lessonSchedule.LessonScheduleId equals lesson.LessonScheduleId into lessons
                         from lesson in lessons.DefaultIfEmpty()
-                        orderby lessonSchedule.StartDateTime
+                        orderby lessonSchedule.StartDateTime descending
                         select new
                         {
                             LessonSchedule = lessonSchedule,
