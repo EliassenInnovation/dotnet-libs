@@ -12,7 +12,7 @@ namespace Nucleus.Lesson.Controllers.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    [AllowAnonymous]
     public class LessonsCalendarController : ControllerBase
     {
         private readonly ILessonsCalendarManager _lessonsCalendarManager;
