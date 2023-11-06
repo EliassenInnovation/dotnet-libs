@@ -19,13 +19,13 @@
       "emailAddress": "davidMcIlroy@eliassen.com"
     },
     "duration": 15,
-    "tags": [],
+    "tags": ["Full Swing Wood", "Full Swing Iron", "Short Game", "Putting"],
     "price": 1.91,
     "goals": [],
     "startDateTime": {
       "$date": "2023-09-20T12:45:00.435+00:00"
     },
-    "endDateTime": "2023-09-20T10:00:00.435+00:00",
+    "endDateTime": "2023-09-20T14:00:00.435+00:00",
     "repeat": "weekly"
   },
   {
@@ -48,7 +48,7 @@
       "emailAddress": "JimmieFowler@eliassen.com"
     },
     "duration": 20,
-    "tags": [],
+    "tags": ["Short Game", "Putting"],
     "price": 1.93,
     "goals": [],
     "startDateTime": {
@@ -77,7 +77,7 @@
       "emailAddress": "JimmyFowler@eliassen.com"
     },
     "duration": 25,
-    "tags": [],
+    "tags": ["Putting"],
     "price": 1.78,
     "goals": [],
     "startDateTime": {
@@ -102,11 +102,11 @@
     },
     "teacher": {
       "userId": "646cf7cbfe22b3a795d90a92",
-      "fullName": "Jimmy Fowler",
+      "fullName": "Jimmie Fowler",
       "emailAddress": "JimmyFowler@eliassen.com"
     },
     "duration": 45,
-    "tags": [],
+    "tags": ["Full Swing Wood", "Full Swing Iron"],
     "price": 1.66,
     "goals": [],
     "startDateTime": {
@@ -135,7 +135,7 @@
       "emailAddress": "davidMcIlroy@eliassen.com"
     },
     "duration": 50,
-    "tags": [],
+    "tags": ["Full Swing Wood", "Short Game", "Putting"],
     "price": 1.44,
     "goals": [],
     "startDateTime": {
@@ -164,7 +164,7 @@
       "emailAddress": "davidMcIlroy@eliassen.com"
     },
     "duration": 55,
-    "tags": [],
+    "tags": ["Full Swing Wood", "Putting"],
     "price": 1.01,
     "goals": [],
     "startDateTime": {
@@ -193,7 +193,7 @@
       "emailAddress": "davidMcIlroy@eliassen.com"
     },
     "duration": 65,
-    "tags": [],
+    "tags": ["Putting"],
     "price": 5.99,
     "goals": [],
     "startDateTime": {
@@ -222,7 +222,7 @@
       "emailAddress": "davidMcIlroy@eliassen.com"
     },
     "duration": 110,
-    "tags": [],
+    "tags": ["Full Swing Wood", "Full Swing Iron", "Short Game"],
     "price": 1.99,
     "goals": [],
     "startDateTime": {
@@ -251,7 +251,7 @@
       "emailAddress": "davidMcIlroy@eliassen.com"
     },
     "duration": 10,
-    "tags": [],
+    "tags": ["Full Swing Wood", "Full Swing Iron", "Short Game"],
     "price": 1.99,
     "goals": [],
     "startDateTime": {
@@ -280,9 +280,7 @@
       "emailAddress": "davidMcIlroy@eliassen.com"
     },
     "duration": 100,
-    "tags": [
-      "18 100% winrate"
-    ],
+    "tags": ["Full Swing Wood", "Full Swing Iron", "Short Game", "Putting", "Bunker"],
     "price": 14.99,
     "goals": [],
     "startDateTime": {
@@ -311,15 +309,217 @@
       "emailAddress": "davidMcIlroy@eliassen.com"
     },
     "duration": 15,
-    "tags": [
-      "100% winrate"
-    ],
+    "tags": ["Full Swing Wood", "Full Swing Iron", "Short Game", "Driving"],
     "price": 11.99,
     "goals": [],
     "startDateTime": {
-      "$date": "2023-07-09T12:43:50.435+00:00"
+      "$date": "2023-09-20T12:43:50.435+00:00"
     },
-    "endDateTime": "2023-07-09T12:58:50.435+00:00",
+    "endDateTime": "2023-09-20T12:58:50.435+00:00",
+    "repeat": "weekly"
+  },
+  {
+    "_id": {
+      "$oid": "647f5966e7abf8eb06238720"
+    },
+    "title": " 19 How to always win no matter what happens. 100% winrate guaranteed!",
+    "slug": "allen@nodirection.com",
+    "mediaLink": "Allen",
+    "previewImage": "Butler",
+    "preview": "",
+    "content": "",
+    "enabled": true,
+    "createdOn": {
+      "$date": "2017-09-20T12:43:50.435+00:00"
+    },
+    "teacher": {
+      "userId": "646cf5c1fe22b3a795d90a8f",
+      "fullName": "Chip Duffer",
+      "emailAddress": "chipduffer@eliassen.com"
+    },
+    "duration": 15,
+    "tags": ["Full Swing Wood", "Full Swing Iron", "Short Game", "Driving"],
+    "price": 11.99,
+    "goals": [],
+    "startDateTime": {
+      "$date": "2023-09-10T12:43:50.435+00:00"
+    },
+    "endDateTime": "2023-09-10T12:58:50.435+00:00",
+    "repeat": "weekly"
+  },
+  {
+    "_id": {
+      "$oid": "647f5966e7abf8eb06238721"
+    },
+    "title": " 19 How to always win no matter what happens. 100% winrate guaranteed!",
+    "slug": "allen@nodirection.com",
+    "mediaLink": "Allen",
+    "previewImage": "Butler",
+    "preview": "",
+    "content": "",
+    "enabled": true,
+    "createdOn": {
+      "$date": "2017-09-20T12:43:50.435+00:00"
+    },
+    "teacher": {
+      "userId": "641cd44eaa22983c3e4edb32",
+      "fullName": "Demo User",
+      "emailAddress": "demo@eliassen.com"
+    },
+    "duration": 15,
+    "tags": ["Full Swing Wood", "Full Swing Iron", "Short Game", "Driving"],
+    "price": 11.99,
+    "goals": [],
+    "startDateTime": {
+      "$date": "2023-09-12T12:43:50.435+00:00"
+    },
+    "endDateTime": "2023-09-12T12:58:50.435+00:00",
+    "repeat": "weekly"
+  },
+  {
+    "_id": {
+      "$oid": "647f5966e7abf8eb06238722"
+    },
+    "title": " 19 How to always win no matter what happens. 100% winrate guaranteed!",
+    "slug": "allen@nodirection.com",
+    "mediaLink": "Allen",
+    "previewImage": "Butler",
+    "preview": "",
+    "content": "",
+    "enabled": true,
+    "createdOn": {
+      "$date": "2017-09-20T12:43:50.435+00:00"
+    },
+    "teacher": {
+      "userId": "646cf69ffe22b3a795d90a90",
+      "fullName": "Sandy Bunker",
+      "emailAddress": "sandybunker@eliassen.com"
+    },
+    "duration": 15,
+    "tags": ["Full Swing Wood", "Full Swing Iron", "Short Game", "Driving"],
+    "price": 11.99,
+    "goals": [],
+    "startDateTime": {
+      "$date": "2023-09-11T12:43:50.435+00:00"
+    },
+    "endDateTime": "2023-09-11T12:58:50.435+00:00",
+    "repeat": "weekly"
+  },
+  {
+    "_id": {
+      "$oid": "647f5966e7abf8eb06238723"
+    },
+    "title": " 19 How to always win no matter what happens. 100% winrate guaranteed!",
+    "slug": "allen@nodirection.com",
+    "mediaLink": "Allen",
+    "previewImage": "Butler",
+    "preview": "",
+    "content": "",
+    "enabled": true,
+    "createdOn": {
+      "$date": "2017-09-20T12:43:50.435+00:00"
+    },
+    "teacher": {
+      "userId": "646cf775fe22b3a795d90a91",
+      "fullName": "Adam Short",
+      "emailAddress": "adamshort@eliassen.com"
+    },
+    "duration": 15,
+    "tags": ["Short Game"],
+    "price": 11.99,
+    "goals": [],
+    "startDateTime": {
+      "$date": "2023-09-11T12:43:50.435+00:00"
+    },
+    "endDateTime": "2023-09-11T12:58:50.435+00:00",
+    "repeat": "weekly"
+  },
+  {
+    "_id": {
+      "$oid": "647f5966e7abf8eb06238724"
+    },
+    "title": " 19 How to always win no matter what happens. 100% winrate guaranteed!",
+    "slug": "allen@nodirection.com",
+    "mediaLink": "Allen",
+    "previewImage": "Butler",
+    "preview": "",
+    "content": "",
+    "enabled": true,
+    "createdOn": {
+      "$date": "2017-09-20T12:43:50.435+00:00"
+    },
+    "teacher": {
+      "userId": "646cf7cbfe22b3a795d90a92",
+      "fullName": "Jimmie Fowler",
+      "emailAddress": "JimmieFowler@eliassen.com"
+    },
+    "duration": 15,
+    "tags": ["Short Game"],
+    "price": 11.99,
+    "goals": [],
+    "startDateTime": {
+      "$date": "2023-09-02T12:43:50.435+00:00"
+    },
+    "endDateTime": "2023-09-02T12:58:50.435+00:00",
+    "repeat": "weekly"
+  },
+  {
+    "_id": {
+      "$oid": "647f5966e7abf8eb06238725"
+    },
+    "title": " 19 How to always win no matter what happens. 100% winrate guaranteed!",
+    "slug": "allen@nodirection.com",
+    "mediaLink": "Allen",
+    "previewImage": "Butler",
+    "preview": "",
+    "content": "",
+    "enabled": true,
+    "createdOn": {
+      "$date": "2017-09-20T12:43:50.435+00:00"
+    },
+    "teacher": {
+      "userId": "646cf84ffe22b3a795d90a94",
+      "fullName": "Tommy Gilmore",
+      "emailAddress": "tommygilmore@eliassen.com"
+    },
+    "duration": 15,
+    "tags": ["Short Game"],
+    "price": 11.99,
+    "goals": [],
+    "startDateTime": {
+      "$date": "2023-09-05T12:43:50.435+00:00"
+    },
+    "endDateTime": "2023-09-05T12:58:50.435+00:00",
+    "repeat": "weekly"
+  },
+  {
+    "_id": {
+      "$oid": "647f5966e7abf8eb06238726"
+    },
+    "title": " 19 How to always win no matter what happens. 100% winrate guaranteed!",
+    "slug": "allen@nodirection.com",
+    "mediaLink": "Allen",
+    "previewImage": "Butler",
+    "preview": "",
+    "content": "",
+    "enabled": true,
+    "createdOn": {
+      "$date": "2017-09-20T12:43:50.435+00:00"
+    },
+    "teacher": {
+      "userId": "646cf84ffe22b3a795d90a94",
+      "fullName": "Tommy Gilmore",
+      "emailAddress": "tommygilmore@eliassen.com"
+    },
+    "duration": 15,
+    "tags": ["Full Swing Wood", "Full Swing Iron", "Short Game", "Driving"],
+    "price": 11.99,
+    "goals": [],
+    "startDateTime": {
+      "$date": "2023-09-20T12:43:50.435+00:00"
+    },
+    "endDateTime": "2023-09-20T12:58:50.435+00:00",
     "repeat": "weekly"
   }
+
 ]

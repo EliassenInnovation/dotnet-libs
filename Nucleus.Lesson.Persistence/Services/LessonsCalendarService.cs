@@ -52,6 +52,7 @@ namespace Nucleus.Lesson.Persistence.Services
                         where lessonSchedule.StartDateTime.Value >= startDateTimeOffset && lessonSchedule.StartDateTime.Value <= endDateTimeOffset
                         join lesson in _db.Lessons.AsQueryable() on lessonSchedule.LessonScheduleId equals lesson.LessonScheduleId into lessons
                         from lesson in lessons.DefaultIfEmpty()
+                        orderby lessonSchedule.StartDateTime descending
                         select new
                         {
                             LessonSchedule = lessonSchedule,
@@ -62,6 +63,7 @@ namespace Nucleus.Lesson.Persistence.Services
             /* The end time of this object should be the end time of the lesson if its booked */
             var result = query.Select(item => new LessonsCalendarModel
             {
+                LessonId = item.Lesson.LessonId,
                 LessonScheduleId = item.LessonSchedule.LessonScheduleId,
                 Title = item.LessonSchedule.Title,
                 Tags = item.LessonSchedule.Tags,

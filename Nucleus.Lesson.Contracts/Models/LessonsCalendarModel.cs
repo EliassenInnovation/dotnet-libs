@@ -14,6 +14,8 @@ namespace Nucleus.Lesson.Contracts.Models
         [IgnoreStringComparisonReplacement]
         public string? LessonScheduleId { get; set; }
 
+        public string? LessonId { get; set; }
+
         public string? Title { get; set; }
 
         public string[]? Tags { get; set; }  
