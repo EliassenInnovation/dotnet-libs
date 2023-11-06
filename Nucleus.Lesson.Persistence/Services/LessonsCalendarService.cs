@@ -31,7 +31,9 @@ namespace Nucleus.Lesson.Persistence.Services
                 DurationEditable = true,
                 AvailableToBook = true,
                 Pro = item.Teacher.FullName,
-                Repeat = item.Repeat
+                Repeat = item.Repeat,
+                Price = item.Price,
+                Duration = item.Duration,
             });
         }
 
@@ -69,7 +71,10 @@ namespace Nucleus.Lesson.Persistence.Services
                 DurationEditable = true,
                 AvailableToBook = item.LessonSchedule.LessonScheduleId == item.Lesson.LessonScheduleId ? false : true,
                 Pro = item.LessonSchedule.Teacher.FullName,
-                Repeat = item.LessonSchedule.Repeat
+                Repeat = item.LessonSchedule.Repeat,
+                Price = item.LessonSchedule.Price,
+                Student = item.Lesson.Student,
+                Duration = item.LessonSchedule.Duration,
             }).AsQueryable();
 
             return result;
