@@ -10,7 +10,7 @@
 	<PropertyGroup Condition="'$(LOCAL_NUGET)' != ''">
 		<PackageOutputPath>$(LOCAL_NUGET.Trim('\'))\</PackageOutputPath>
 	</PropertyGroup>
-	
+
 	<PropertyGroup Condition="'$(DOCUMENT_PATH)' != ''">
 		<DocumentPath>$(DOCUMENT_PATH.Trim('\'))\</DocumentPath>
 	</PropertyGroup>
@@ -18,7 +18,7 @@
 		<DocumentPath>..\docs\</DocumentPath>
 	</PropertyGroup>
 
-	<ItemGroup>
+	<ItemGroup  Condition=" '$(Configuration)' == 'Debug' ">
 		<PackageReference Include="GitVersion.MsBuild" Version="5.12.0">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>

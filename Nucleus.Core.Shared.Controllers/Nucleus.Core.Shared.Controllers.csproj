@@ -12,6 +12,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Eliassen.AspNetCore.Mvc" Version="0.1.55-dev-ndm-fixpipeline.2" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<ProjectReference Include="..\Nucleus.Core.Shared.Contracts\Nucleus.Core.Shared.Contracts.csproj" />
 	</ItemGroup>
 

@@ -356,17 +356,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Nucleus.Core.Contracts.Models.ResponseModel-Nucleus.External.Azure.StorageAccount.DocumentModel"
+                  "$ref": "#/components/schemas/Nucleus.Core.Contracts.Models.ResponseModel-Eliassen.Azure.StorageAccount.DocumentModel"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Nucleus.Core.Contracts.Models.ResponseModel-Nucleus.External.Azure.StorageAccount.DocumentModel"
+                  "$ref": "#/components/schemas/Nucleus.Core.Contracts.Models.ResponseModel-Eliassen.Azure.StorageAccount.DocumentModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Nucleus.Core.Contracts.Models.ResponseModel-Nucleus.External.Azure.StorageAccount.DocumentModel"
+                  "$ref": "#/components/schemas/Nucleus.Core.Contracts.Models.ResponseModel-Eliassen.Azure.StorageAccount.DocumentModel"
                 }
               }
             }
@@ -2468,7 +2468,7 @@
         },
         "additionalProperties": false
       },
-      "Nucleus.Core.Contracts.Models.ResponseModel-Nucleus.External.Azure.StorageAccount.DocumentModel": {
+      "Nucleus.Core.Contracts.Models.ResponseModel-Eliassen.Azure.StorageAccount.DocumentModel": {
         "type": "object",
         "properties": {
           "isSuccess": {
@@ -2479,7 +2479,7 @@
             "nullable": true
           },
           "response": {
-            "$ref": "#/components/schemas/Nucleus.External.Azure.StorageAccount.DocumentModel"
+            "$ref": "#/components/schemas/Eliassen.Azure.StorageAccount.DocumentModel"
           }
         },
         "additionalProperties": false
@@ -2628,7 +2628,7 @@
         },
         "additionalProperties": false
       },
-      "Nucleus.External.Azure.StorageAccount.DocumentModel": {
+      "Eliassen.Azure.StorageAccount.DocumentModel": {
         "type": "object",
         "properties": {
           "documentId": {

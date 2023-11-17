@@ -7,6 +7,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Eliassen.AspNetCore.Mvc" Version="0.1.55-dev-ndm-fixpipeline.2" />
+		<PackageReference Include="Eliassen.Azure.StorageAccount" Version="0.1.55-dev-ndm-fixpipeline.2" />
+		<PackageReference Include="Eliassen.Microsoft.B2C" Version="0.1.55-dev-ndm-fixpipeline.2" />
+		
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.AzureAD.UI" Version="6.0.21" />
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.AzureADB2C.UI" Version="6.0.21" />
 		<PackageReference Include="Microsoft.Identity.Web" Version="2.13.3" />

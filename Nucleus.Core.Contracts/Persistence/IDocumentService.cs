@@ -1,5 +1,5 @@
-﻿using Nucleus.Core.Contracts.Models.Filters;
-using Nucleus.External.Azure.StorageAccount;
+﻿using Eliassen.Azure.StorageAccount;
+using Nucleus.Core.Contracts.Models.Filters;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
