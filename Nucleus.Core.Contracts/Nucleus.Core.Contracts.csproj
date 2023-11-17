@@ -10,9 +10,4 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Framework\Eliassen.System\Eliassen.System.csproj" />
-	  <ProjectReference Include="..\Nucleus.External.Azure.StorageAccount.Abstractions\Nucleus.External.Azure.StorageAccount.Abstractions.csproj" />
-  </ItemGroup>
-
 </Project>

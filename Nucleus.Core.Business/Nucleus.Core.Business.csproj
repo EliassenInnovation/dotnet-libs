@@ -10,10 +10,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Framework\Eliassen.System\Eliassen.System.csproj" />
 		<ProjectReference Include="..\Nucleus.AspNetCore.Mvc\Nucleus.AspNetCore.Mvc.csproj" />
 		<ProjectReference Include="..\Nucleus.Core.Contracts\Nucleus.Core.Contracts.csproj" />
-		<ProjectReference Include="..\Nucleus.External.Microsoft.B2C.Abstractions\Nucleus.External.Microsoft.B2C.Abstractions.csproj" />
 	</ItemGroup>
 
 </Project>

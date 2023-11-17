@@ -15,11 +15,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Framework\Eliassen.AspNetCore.Mvc\Eliassen.AspNetCore.Mvc.csproj" />
 		<ProjectReference Include="..\Nucleus.AspNetCore.Mvc\Nucleus.AspNetCore.Mvc.csproj" />
-		
-		<ProjectReference Include="..\Nucleus.External.Azure.StorageAccount\Nucleus.External.Azure.StorageAccount.csproj" />		
-		<ProjectReference Include="..\Nucleus.External.Microsoft.B2C\Nucleus.External.Microsoft.B2C.csproj" />
 
 		<ProjectReference Include="..\Nucleus.Core.Business\Nucleus.Core.Business.csproj" />
 		<ProjectReference Include="..\Nucleus.Core.Controllers\Nucleus.Core.Controllers.csproj" />

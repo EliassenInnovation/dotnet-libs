@@ -13,11 +13,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\Framework\Eliassen.Handlebars.Extensions\Eliassen.Handlebars.Extensions.csproj" />
-		<ProjectReference Include="..\..\Framework\Eliassen.System\Eliassen.System.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<None Update="*.hbs">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</None>

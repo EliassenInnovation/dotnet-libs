@@ -20,8 +20,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\Framework\Eliassen.MongoDB.Extensions\Eliassen.MongoDB.Extensions.csproj" />
-		<ProjectReference Include="..\..\Framework\Eliassen.System\Eliassen.System.csproj" />
 		<ProjectReference Include="..\..\Nucleus.Core.Persistence\Nucleus.Core.Persistence.csproj" />
 	</ItemGroup>
 

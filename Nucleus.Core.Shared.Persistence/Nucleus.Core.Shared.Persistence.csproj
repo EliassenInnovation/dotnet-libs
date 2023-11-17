@@ -12,7 +12,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Framework\Eliassen.MongoDB.Extensions\Eliassen.MongoDB.Extensions.csproj" />
 		<ProjectReference Include="..\Nucleus.Core.Shared.Contracts\Nucleus.Core.Shared.Contracts.csproj" />
 	</ItemGroup>
 

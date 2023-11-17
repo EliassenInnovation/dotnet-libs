@@ -9,10 +9,5 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.IdentityModel.Logging" Version="6.32.2" />
 	</ItemGroup>
-	
-	<ItemGroup>
-		<ProjectReference Include="..\Framework\Eliassen.AspNetCore.Mvc\Eliassen.AspNetCore.Mvc.csproj" />
-		<ProjectReference Include="..\Framework\Eliassen.System\Eliassen.System.csproj" />
-	</ItemGroup>
 
 </Project>

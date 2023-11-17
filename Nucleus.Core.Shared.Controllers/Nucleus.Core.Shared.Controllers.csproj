@@ -12,7 +12,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Framework\Eliassen.AspNetCore.Mvc\Eliassen.AspNetCore.Mvc.csproj" />
 		<ProjectReference Include="..\Nucleus.Core.Shared.Contracts\Nucleus.Core.Shared.Contracts.csproj" />
 	</ItemGroup>
 
