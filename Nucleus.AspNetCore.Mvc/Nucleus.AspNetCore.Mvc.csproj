@@ -7,8 +7,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Eliassen.AspNetCore.Mvc" Version="0.1.55-dev-ndm-fixpipeline.2" />
-		<PackageReference Include="Eliassen.System" Version="0.1.55-dev-ndm-fixpipeline.2" />
+		<PackageReference Include="Eliassen.AspNetCore.Mvc" Version="0.1.55" />
+		<PackageReference Include="Eliassen.System" Version="0.1.55" />
 		
 		<PackageReference Include="Microsoft.IdentityModel.Logging" Version="6.32.2" />
 	</ItemGroup>

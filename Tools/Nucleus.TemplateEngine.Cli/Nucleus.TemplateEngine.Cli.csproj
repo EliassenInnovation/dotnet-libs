@@ -8,8 +8,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Eliassen.Handlebars.Extensions" Version="0.1.55-dev-ndm-fixpipeline.2" />
-		<PackageReference Include="Eliassen.System" Version="0.1.55-dev-ndm-fixpipeline.2" />
+		<PackageReference Include="Eliassen.Handlebars.Extensions" Version="0.1.55" />
+		<PackageReference Include="Eliassen.System" Version="0.1.55" />
 
 		<PackageReference Include="Microsoft.Extensions.FileSystemGlobbing" Version="7.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />

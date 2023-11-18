@@ -12,7 +12,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Eliassen.AspNetCore.Mvc" Version="0.1.55-dev-ndm-fixpipeline.2" />
+		<PackageReference Include="Eliassen.AspNetCore.Mvc" Version="0.1.55" />
 	</ItemGroup>
 
 	<ItemGroup>

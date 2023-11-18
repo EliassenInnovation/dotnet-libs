@@ -6,8 +6,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Eliassen.Azure.StorageAccount.Abstractions" Version="0.1.55-dev-ndm-fixpipeline.2" />
-		<PackageReference Include="Eliassen.System" Version="0.1.55-dev-ndm-fixpipeline.2" />
+		<PackageReference Include="Eliassen.Azure.StorageAccount.Abstractions" Version="0.1.55" />
+		<PackageReference Include="Eliassen.System" Version="0.1.55" />
 
 		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
