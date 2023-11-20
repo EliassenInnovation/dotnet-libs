@@ -1,6 +1,6 @@
 ﻿
 using Eliassen.MongoDB.Extensions;
-using Nucleus.Core.Contracts.Models;
+using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -8,6 +8,7 @@ using System.ComponentModel.DataAnnotations;
 namespace Nucleus.Core.Persistence.Collections;
 
 [CollectionName("users")]
+[BsonIgnoreExtraElements]
 public class UserCollection
 {
     [Key]

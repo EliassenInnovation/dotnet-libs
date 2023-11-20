@@ -21,10 +21,6 @@
 		<ProjectReference Include="..\Nucleus.External.Azure.StorageAccount\Nucleus.External.Azure.StorageAccount.csproj" />		
 		<ProjectReference Include="..\Nucleus.External.Microsoft.B2C\Nucleus.External.Microsoft.B2C.csproj" />
 
-		<ProjectReference Include="..\Nucleus.Blog.Business\Nucleus.Blog.Business.csproj" />
-		<ProjectReference Include="..\Nucleus.Blog.Controllers\Nucleus.Blog.Controllers.csproj" />
-		<ProjectReference Include="..\Nucleus.Blog.Persistence\Nucleus.Blog.Persistence.csproj" />
-
 		<ProjectReference Include="..\Nucleus.Core.Business\Nucleus.Core.Business.csproj" />
 		<ProjectReference Include="..\Nucleus.Core.Controllers\Nucleus.Core.Controllers.csproj" />
 		<ProjectReference Include="..\Nucleus.Core.Persistence\Nucleus.Core.Persistence.csproj" />
@@ -32,14 +28,6 @@
 		<ProjectReference Include="..\Nucleus.Core.Shared.Business\Nucleus.Core.Shared.Business.csproj" />
 		<ProjectReference Include="..\Nucleus.Core.Shared.Controllers\Nucleus.Core.Shared.Controllers.csproj" />
 		<ProjectReference Include="..\Nucleus.Core.Shared.Persistence\Nucleus.Core.Shared.Persistence.csproj" />
-
-		<ProjectReference Include="..\Nucleus.Project.Business\Nucleus.Project.Business.csproj" />
-		<ProjectReference Include="..\Nucleus.Project.Controllers\Nucleus.Project.Controllers.csproj" />
-		<ProjectReference Include="..\Nucleus.Project.Persistence\Nucleus.Project.Persistence.csproj" />
-		
-		<ProjectReference Include="..\Nucleus.Lesson.Business\Nucleus.Lesson.Business.csproj" />
-		<ProjectReference Include="..\Nucleus.Lesson.Controllers\Nucleus.Lesson.Controllers.csproj" />
-		<ProjectReference Include="..\Nucleus.Lesson.Persistence\Nucleus.Lesson.Persistence.csproj" />
 	</ItemGroup>
 
 	<Target Name="BuildSwagger">

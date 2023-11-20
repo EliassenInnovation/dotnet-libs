@@ -4,10 +4,7 @@ using Eliassen.System.Configuration;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Nucleus.Blog.Persistence.Services;
 using Nucleus.Core.Persistence.Services;
-using Nucleus.Lesson.Persistence.Services;
-using Nucleus.Project.Persistence.Services;
 
 namespace Nucleus.Dataloader.Cli;
 
@@ -34,10 +31,7 @@ public class Program
                 services
                     .AddMongoServices(context.Configuration)
 
-                    .TryAddMongoDatabase<IBlogMongoDatabase>()
-                    .TryAddMongoDatabase<ILessonMongoDatabase>()
                     .TryAddMongoDatabase<ICoreMongoDatabase>()
-                    .TryAddMongoDatabase<IProjectMongoDatabase>()
                     ;
 
                 services.AddTransient<IDataloaderCommandFactory, DataloaderCommandFactory>();

@@ -72,9 +72,12 @@ steps:
     targetType: 'inline'
     script: |
             $fullSemVerLower = "$(fullSemVer)".ToLower()  
+            $fullSemVerLowerTag = "core-$(fullSemVer)".ToLower()  
             Write-Host "FullSemVerLower=$fullSemVerLower"
+            Write-Host "FullSemVerLowerTag=$fullSemVerLowerTag"
             Write-Host "##vso[build.updatebuildnumber]$fullSemVerLower"
-            Write-Host "##vso[task.setvariable variable=FullSemVerLower;issecret=false]$fullSemVerLower"  
+            Write-Host "##vso[task.setvariable variable=FullSemVerLower;issecret=false]$fullSemVerLower" 
+            Write-Host "##vso[task.setvariable variable=FullSemVerLowerTag;issecret=false]$fullSemVerLowerTag"  
             Write-Host "##vso[task.setvariable variable=WebAppPackagePath;issecret=false]$(build.artifactStagingDirectory)\WebApp.zip"  
             Write-Host "##vso[task.setvariable variable=TestResultsPath;issecret=false]$(Agent.TempDirectory)"  
             Write-Host "##vso[task.setvariable variable=TestDataPath;issecret=false]$(Build.SourcesDirectory)\Conf\MongoDb\SampleData"
@@ -156,42 +159,42 @@ steps:
   condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
   inputs:
     type: 'Build'
-    tags: '$(FullSemVerLower)'
+    tags: '$(FullSemVerLowerTag)'
     
 # https://dina-muscanell.com/blog/set-git-tags-with-azure-devops/
 # https://stackoverflow.com/questions/59226055/setting-git-tag-from-azure-devops-build-pipeline-on-complete
 # make sure the build service account is granted "Create Tag" and "Contribute" under repository security
 - script: |
           git config --global user.name "AzureDevOps Agent"
-          git tag "$(FullSemVerLower)" --force
-          git push origin "$(FullSemVerLower)" --force
-          echo "Tagging $(Build.Repository.Name) with $(FullSemVerLower)"
+          git tag "$(FullSemVerLowerTag)" --force
+          git push origin "$(FullSemVerLowerTag)" --force
+          echo "Tagging $(Build.Repository.Name) with $(FullSemVerLowerTag)"
   displayName: 'Tag Code'
   condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
-- task: AzureRmWebAppDeployment@4
-  condition: and(succeeded(), eq('${{ parameters.doDeployment }}', true), ne(variables['Build.Reason'], 'PullRequest'))
-  displayName: 'Deploying API to ${{ parameters.targetEnvironment }}'
-  inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'AppDev Project Nucleus'
-    appType: 'webApp'
-    WebAppName: '$(${{parameters.targetEnvironment}}-ServerName)'
-    packageForLinux: '$(WebAppPackagePath)'
+# - task: AzureRmWebAppDeployment@4
+#   condition: and(succeeded(), eq('${{ parameters.doDeployment }}', true), ne(variables['Build.Reason'], 'PullRequest'))
+#   displayName: 'Deploying API to ${{ parameters.targetEnvironment }}'
+#   inputs:
+#     ConnectionType: 'AzureRM'
+#     azureSubscription: 'AppDev Project Nucleus'
+#     appType: 'webApp'
+#     WebAppName: '$(${{parameters.targetEnvironment}}-ServerName)'
+#     packageForLinux: '$(WebAppPackagePath)'
 
-# This is an example step to do a data deployment as part of application deployment
-- task: DotNetCoreCLI@2
-  condition: and(succeeded(), eq('${{ parameters.doDeployment }}', true), ne('${{ parameters.dataDeploymentType }}', 'None'), ne(variables['Build.Reason'], 'PullRequest'))
-  displayName: 'Deploying Data to ${{ parameters.targetEnvironment }}'
-  inputs:
-    command: 'run'
-    projects: 'Tools\Nucleus.Dataloader.Cli'
-    arguments: >
-      --configuration $(buildConfiguration) 
-      --no-build 
-      --no-restore 
-      --
-      --SourcePath="$(TestDataPath)"
-      --Action=${{ parameters.dataDeploymentType }}
-      --ConnectionString="$(${{parameters.targetEnvironment}}-MongoDatabase__ConnectionString)"
-      --DatabaseName="$(${{parameters.targetEnvironment}}-MongoDatabase__DatabaseName)"
+# # This is an example step to do a data deployment as part of application deployment
+# - task: DotNetCoreCLI@2
+#   condition: and(succeeded(), eq('${{ parameters.doDeployment }}', true), ne('${{ parameters.dataDeploymentType }}', 'None'), ne(variables['Build.Reason'], 'PullRequest'))
+#   displayName: 'Deploying Data to ${{ parameters.targetEnvironment }}'
+#   inputs:
+#     command: 'run'
+#     projects: 'Tools\Nucleus.Dataloader.Cli'
+#     arguments: >
+#       --configuration $(buildConfiguration) 
+#       --no-build 
+#       --no-restore 
+#       --
+#       --SourcePath="$(TestDataPath)"
+#       --Action=${{ parameters.dataDeploymentType }}
+#       --ConnectionString="$(${{parameters.targetEnvironment}}-MongoDatabase__ConnectionString)"
+#       --DatabaseName="$(${{parameters.targetEnvironment}}-MongoDatabase__DatabaseName)"
