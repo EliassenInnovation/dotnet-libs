@@ -12,6 +12,7 @@ namespace Nucleus.Core.Business
             services.TryAddTransient<IDocumentManager, DocumentManager>();
             services.TryAddTransient<IUserProfileManager, UserProfileManager>();
             services.TryAddTransient<IUserManagementManager, UserManagementManager>();
+            services.TryAddTransient<IProfileManagementManager, ProfileManagementManager>();
             return services;
         }
     }
