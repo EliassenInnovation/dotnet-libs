@@ -1,6 +1,7 @@
 ﻿
 using Eliassen.MongoDB.Extensions;
 using MongoDB.Bson.Serialization.Attributes;
+using Nucleus.Core.Contracts.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
