@@ -7,9 +7,9 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Eliassen.AspNetCore.Mvc" Version="0.1.55" />
-		<PackageReference Include="Eliassen.Azure.StorageAccount" Version="0.1.55" />
-		<PackageReference Include="Eliassen.Microsoft.B2C" Version="0.1.55" />
+		<PackageReference Include="Eliassen.AspNetCore.Mvc" Version="0.1.56-dev-ndm-359-updatedotnet.3" />
+		<PackageReference Include="Eliassen.Azure.StorageAccount" Version="0.1.56-dev-ndm-359-updatedotnet.3" />
+		<PackageReference Include="Eliassen.Microsoft.B2C" Version="0.1.56-dev-ndm-359-updatedotnet.3" />
 		
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.AzureAD.UI" Version="6.0.21" />
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.AzureADB2C.UI" Version="6.0.21" />

@@ -6,8 +6,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Eliassen.Microsoft.B2C.Abstractions" Version="0.1.55" />
-		<PackageReference Include="Eliassen.System" Version="0.1.55" />
+		<PackageReference Include="Eliassen.Microsoft.B2C.Abstractions" Version="0.1.56-dev-ndm-359-updatedotnet.3" />
+		<PackageReference Include="Eliassen.System" Version="0.1.56-dev-ndm-359-updatedotnet.3" />
 		
 		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.1" />
 	</ItemGroup>
