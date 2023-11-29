@@ -7,8 +7,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Eliassen.AspNetCore.Mvc" Version="0.1.56-dev-ndm-359-updatedotnet.3" />
-		<PackageReference Include="Eliassen.System" Version="0.1.56-dev-ndm-359-updatedotnet.3" />
+		<PackageReference Include="Eliassen.AspNetCore.Mvc" Version="0.1.56" />
+		<PackageReference Include="Eliassen.System" Version="0.1.56" />
 		
 		<PackageReference Include="Microsoft.IdentityModel.Logging" Version="7.0.3" />
 	</ItemGroup>
