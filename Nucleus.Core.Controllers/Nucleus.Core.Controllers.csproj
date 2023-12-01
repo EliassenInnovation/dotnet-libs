@@ -1,16 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net7.0</TargetFramework>
+		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>disable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Eliassen.AspNetCore.Mvc" Version="0.1.55" />
-	  <PackageReference Include="Eliassen.Azure.StorageAccount" Version="0.1.55" />
-	  <PackageReference Include="Eliassen.Microsoft.B2C" Version="0.1.55" />
+	  <PackageReference Include="Eliassen.AspNetCore.Mvc" Version="0.1.56" />
+	  <PackageReference Include="Eliassen.Azure.StorageAccount" Version="0.1.56" />
+	  <PackageReference Include="Eliassen.Microsoft.B2C" Version="0.1.56" />
 	</ItemGroup>
 
 	<ItemGroup>

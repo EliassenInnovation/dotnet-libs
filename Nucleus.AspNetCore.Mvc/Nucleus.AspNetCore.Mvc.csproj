@@ -1,16 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net7.0</TargetFramework>
+		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>false</ImplicitUsings>
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Eliassen.AspNetCore.Mvc" Version="0.1.55" />
-		<PackageReference Include="Eliassen.System" Version="0.1.55" />
+		<PackageReference Include="Eliassen.AspNetCore.Mvc" Version="0.1.56" />
+		<PackageReference Include="Eliassen.System" Version="0.1.56" />
 		
-		<PackageReference Include="Microsoft.IdentityModel.Logging" Version="6.32.2" />
+		<PackageReference Include="Microsoft.IdentityModel.Logging" Version="7.0.3" />
 	</ItemGroup>
 
 </Project>

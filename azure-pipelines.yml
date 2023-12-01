@@ -46,10 +46,10 @@ steps:
   fetchDepth: 0
 
 - task: UseDotNet@2
-  displayName: 'Install .Net 7.0 SDK'
+  displayName: 'Install .Net 8.0 SDK'
   inputs:
     packageType: 'sdk'
-    version: '7.0.x'       
+    version: '8.0.x'       
                   
 - task: gitversion/setup@0
   displayName: Install GitVersion

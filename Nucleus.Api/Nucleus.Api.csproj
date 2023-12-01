@@ -1,21 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
 	<PropertyGroup>
-		<TargetFramework>net7.0</TargetFramework>
+		<TargetFramework>net8.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Eliassen.AspNetCore.Mvc" Version="0.1.55" />
-		<PackageReference Include="Eliassen.Azure.StorageAccount" Version="0.1.55" />
-		<PackageReference Include="Eliassen.Microsoft.B2C" Version="0.1.55" />
+		<PackageReference Include="Eliassen.AspNetCore.Mvc" Version="0.1.56" />
+		<PackageReference Include="Eliassen.Azure.StorageAccount" Version="0.1.56" />
+		<PackageReference Include="Eliassen.Microsoft.B2C" Version="0.1.56" />
 		
-		<PackageReference Include="Microsoft.AspNetCore.Authentication.AzureAD.UI" Version="6.0.21" />
-		<PackageReference Include="Microsoft.AspNetCore.Authentication.AzureADB2C.UI" Version="6.0.21" />
-		<PackageReference Include="Microsoft.Identity.Web" Version="2.13.3" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.AzureAD.UI" Version="6.0.25" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.AzureADB2C.UI" Version="6.0.25" />
+		<PackageReference Include="Microsoft.Identity.Web" Version="2.15.5" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-		<PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
