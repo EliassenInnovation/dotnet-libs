@@ -1,4 +1,6 @@
 using Eliassen.AspNetCore.Mvc;
+using Eliassen.Azure.StorageAccount;
+using Eliassen.Microsoft.B2C;
 using Eliassen.MongoDB.Extensions;
 using Eliassen.System;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -7,8 +9,6 @@ using Nucleus.Core.Business;
 using Nucleus.Core.Controllers;
 using Nucleus.Core.Persistence;
 using Nucleus.Core.Shared.Business;
-using Nucleus.External.Azure.StorageAccount;
-using Nucleus.External.Microsoft.B2C;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);

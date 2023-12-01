@@ -7,6 +7,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Eliassen.TestUtilities" Version="0.1.55" />
+		
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
 		<PackageReference Include="MongoDB.Bson" Version="2.21.0" />
 		<PackageReference Include="System.Linq.Async" Version="6.0.1" />
@@ -23,7 +25,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Framework\Eliassen.TestUtilities\Eliassen.TestUtilities.csproj" />
 		<ProjectReference Include="..\Nucleus.Core.Shared.Business\Nucleus.Core.Shared.Business.csproj" />
 		<ProjectReference Include="..\Nucleus.Core.Shared.Contracts\Nucleus.Core.Shared.Contracts.csproj" />
 		<ProjectReference Include="..\Nucleus.Core.Shared.Controllers\Nucleus.Core.Shared.Controllers.csproj" />

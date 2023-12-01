@@ -12,7 +12,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Framework\Eliassen.AspNetCore.Mvc\Eliassen.AspNetCore.Mvc.csproj" />
+		<PackageReference Include="Eliassen.AspNetCore.Mvc" Version="0.1.55" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<ProjectReference Include="..\Nucleus.Core.Shared.Contracts\Nucleus.Core.Shared.Contracts.csproj" />
 	</ItemGroup>
 

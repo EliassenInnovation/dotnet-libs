@@ -1,1 +1,0 @@
-https://github.com/Handlebars-Net/Handlebars.Net.Extension.Json

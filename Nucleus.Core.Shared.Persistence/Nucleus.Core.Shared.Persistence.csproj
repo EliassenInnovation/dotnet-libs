@@ -6,13 +6,14 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Eliassen.MongoDB.Extensions" Version="0.1.55" />
+		
 		<PackageReference Include="Microsoft.Extensions.Options" Version="7.0.1" />
 		<PackageReference Include="MongoDB.Driver" Version="2.21.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Framework\Eliassen.MongoDB.Extensions\Eliassen.MongoDB.Extensions.csproj" />
 		<ProjectReference Include="..\Nucleus.Core.Shared.Contracts\Nucleus.Core.Shared.Contracts.csproj" />
 	</ItemGroup>
 

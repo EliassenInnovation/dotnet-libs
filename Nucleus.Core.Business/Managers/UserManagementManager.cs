@@ -1,8 +1,8 @@
-﻿using Nucleus.Core.Contracts.Managers;
+﻿using Eliassen.Microsoft.B2C.Identity;
+using Nucleus.Core.Contracts.Managers;
 using Nucleus.Core.Contracts.Models;
 using Nucleus.Core.Contracts.Models.Keys;
 using Nucleus.Core.Contracts.Persistence;
-using Nucleus.External.Microsoft.B2C.Identity;
 using System;
 using System.Linq;
 using System.Threading.Tasks;

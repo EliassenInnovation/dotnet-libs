@@ -8,6 +8,12 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="Eliassen.AspNetCore.Mvc" Version="0.1.55" />
+	  <PackageReference Include="Eliassen.Azure.StorageAccount" Version="0.1.55" />
+	  <PackageReference Include="Eliassen.Microsoft.B2C" Version="0.1.55" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<ProjectReference Include="..\Nucleus.AspNetCore.Mvc\Nucleus.AspNetCore.Mvc.csproj" />
 		<ProjectReference Include="..\Nucleus.Core.Contracts\Nucleus.Core.Contracts.csproj" />
 	</ItemGroup>

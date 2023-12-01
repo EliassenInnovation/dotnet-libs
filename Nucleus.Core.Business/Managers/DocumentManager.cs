@@ -1,9 +1,9 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Eliassen.Azure.StorageAccount;
+using Microsoft.Extensions.Configuration;
 using Nucleus.Core.Contracts.Managers;
 using Nucleus.Core.Contracts.Models;
 using Nucleus.Core.Contracts.Models.Filters;
 using Nucleus.Core.Contracts.Persistence;
-using Nucleus.External.Azure.StorageAccount;
 using System;
 using System.Collections.Generic;
 using System.IO;

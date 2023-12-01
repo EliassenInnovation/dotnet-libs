@@ -1,6 +1,0 @@
-<Project Sdk="Microsoft.Build.Traversal/4.1.0">
-  <ItemGroup>
-    <!-- Build all projects recursively under the "src" folder -->
-    <ProjectReference Include="**\Eliassen*.csproj" />
-  </ItemGroup>
-</Project>

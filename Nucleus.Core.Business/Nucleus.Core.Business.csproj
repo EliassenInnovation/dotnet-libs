@@ -6,14 +6,15 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Eliassen.Microsoft.B2C.Abstractions" Version="0.1.55" />
+		<PackageReference Include="Eliassen.System" Version="0.1.55" />
+		
 		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.1" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Framework\Eliassen.System\Eliassen.System.csproj" />
 		<ProjectReference Include="..\Nucleus.AspNetCore.Mvc\Nucleus.AspNetCore.Mvc.csproj" />
 		<ProjectReference Include="..\Nucleus.Core.Contracts\Nucleus.Core.Contracts.csproj" />
-		<ProjectReference Include="..\Nucleus.External.Microsoft.B2C.Abstractions\Nucleus.External.Microsoft.B2C.Abstractions.csproj" />
 	</ItemGroup>
 
 </Project>
